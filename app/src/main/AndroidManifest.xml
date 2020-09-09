@@ -2,7 +2,48 @@
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
     package="o1310.rx1310.app.aideweb.projer" >
-	
-	<!-- Hello, world! -->
-	
+
+	<original-package android:name="o1310.rx1310.app.aideweb.projer" />
+
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+	<supports-screens 
+		android:anyDensity="true" 
+		android:largeScreens="true" 
+		android:normalScreens="true" 
+		android:resizeable="true" 
+		android:smallScreens="true" 
+		android:xlargeScreens="true" />
+
+	<uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+
+	<application
+		android:requestLegacyExternalStorage="true"
+		android:icon="@mipmap/ic_launcher" 
+		android:roundIcon="@mipmap/ic_launcher_round"
+		android:label="@string/app_name" 
+		android:theme="@style/AppTheme"
+		android:allowBackup="true"
+		android:supportsRtl="true"
+		android:resizeableActivity="true">
+
+		<activity
+			android:name=".activity.MainActivity">
+
+			<intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+				<!--action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" /-->
+				<action android:name="android.intent.action.APPLICATION_PREFERENCES" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+				<category android:name="android.intent.category.PREFERENCE" />
+
+            </intent-filter>
+
+		</activity>
+
+	</application>
+
 </manifest>

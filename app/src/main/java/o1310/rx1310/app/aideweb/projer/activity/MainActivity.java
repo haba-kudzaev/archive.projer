@@ -1,18 +1,18 @@
 package o1310.rx1310.app.aideweb.projer.activity;
 
 import android.Manifest;
+import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import o1310.rx1310.app.aideweb.projer.R;
 import o1310.rx1310.app.aideweb.projer.activity.MainActivity;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
 	SharedPreferences mSharedPreferences;
 

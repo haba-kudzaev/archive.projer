@@ -2,19 +2,26 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
 	<style name="AppTheme" parent="Theme.AppCompat">
+		
 	    <item name="colorAccent">@color/colorAccent</item>
 		<item name="colorPrimary">@color/colorPrimary</item>
 		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		
 		<item name="colorButtonNormal">@color/colorAccent</item>
 		<item name="colorControlHighlight">@color/colorAccent</item>
-		<item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
+		
 		<item name="alertDialogTheme">@style/AppTheme.AlertDialog</item>
+		
 		<item name="android:navigationBarColor">@color/colorWindow</item>
 		<item name="android:windowBackground">@color/colorWindow</item>
 		<item name="android:colorBackgroundCacheHint">@null</item>
 		<item name="android:displayOptions">showCustom</item>
 		<item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">false</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+		<item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
+		
+		<item name="appColorIcon">@color/colorIcon</item>
+		
     </style>
 
 	<style name="AppTheme.AlertDialog" parent="Theme.AppCompat.Dialog.Alert">

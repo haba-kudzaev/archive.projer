@@ -18,13 +18,13 @@ import android.widget.Toast;
 
 import o1310.rx1310.app.aideweb.projer.R;
 
-public class MainFragment extends ListFragment {
+public class SampleProjectsFragment extends ListFragment {
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 
-		ArrayAdapter<CharSequence> a = ArrayAdapter.createFromResource(getActivity(), R.array.sample, R.layout.ui_listview_item);
+		ArrayAdapter<CharSequence> a = ArrayAdapter.createFromResource(getActivity(), R.array.projects_sample, R.layout.ui_listview_item);
 		setListAdapter(a);
 
 	}

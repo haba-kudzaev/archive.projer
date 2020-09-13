@@ -21,14 +21,16 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
-
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+
+import android.view.Menu;
+import android.view.MenuItem;
 
 import o1310.rx1310.app.aideweb.projer.R;
 import o1310.rx1310.app.aideweb.projer.activity.MainActivity;
 import o1310.rx1310.app.aideweb.projer.adapter.TheFragmentPagerAdapter;
-import o1310.rx1310.app.aideweb.projer.fragment.MainFragment;
+import o1310.rx1310.app.aideweb.projer.fragment.SampleProjectsFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -65,14 +67,36 @@ public class MainActivity extends AppCompatActivity {
 
 		TheFragmentPagerAdapter a = new TheFragmentPagerAdapter(getSupportFragmentManager());
 
-		a.addFragment(new MainFragment(), getString(R.string.app_name));
-		a.addFragment(new MainFragment(), getString(R.string.app_name));
-		a.addFragment(new MainFragment(), getString(R.string.app_name));
-		a.addFragment(new MainFragment(), getString(R.string.app_name));
-		a.addFragment(new MainFragment(), getString(R.string.app_name));
-
+		a.addFragment(new SampleProjectsFragment(), getString(R.string.tab_projects_samples));
+		a.addFragment(new SampleProjectsFragment(), getString(R.string.tab_projects_bootstrap));
+		a.addFragment(new SampleProjectsFragment(), getString(R.string.tab_projects_jquery));
+		a.addFragment(new SampleProjectsFragment(), getString(R.string.tab_projects_vuejs));
+		
 		vp.setAdapter(a);
 
 	}
+	
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.main, menu);
+		//menu.getItem(1).setVisible(false);
+		return super.onCreateOptionsMenu(menu);
+	}
+
+    
+    public boolean onOptionsItemSelected(MenuItem mi) {
+
+        int id = mi.getItemId();
+
+        switch(id) {
+
+            case R.id.menu_main_about :
+				
+                //startActivity(new Intent(this, SettingsActivity.class));
+                return true;
+				
+        }
+
+        return super.onOptionsItemSelected(mi);
+    }
 
 }

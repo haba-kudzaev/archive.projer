@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	
-	<string-array name="sample">
-		<item>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</item>
-		<item>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</item>
-		<item>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</item>
-		<item>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</item>
-		<item>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</item>
-		<item>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</item>
-		<item>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</item>
-		<item>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</item>
-	</string-array>
+	<string name="tab_projects_samples">Обычные проекты</string>
+	<string name="tab_projects_bootstrap">Bootstrap</string>
+	<string name="tab_projects_jquery">jQuery</string>
+	<string name="tab_projects_vuejs">Vue.js</string>
 	
 </resources>

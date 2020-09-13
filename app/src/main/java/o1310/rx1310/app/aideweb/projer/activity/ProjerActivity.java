@@ -49,6 +49,8 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		
 		mToolbar = findViewById(R.id.ui_view_toolBar);
 		
+		setUI();
+		
 		mInputProjectName = findViewById(R.id.ui_projer_view_inputProjectName);
 		mInputProjectName.setHint(R.string.desc_projer_inputProjectName);
 		
@@ -58,7 +60,14 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		mCreatorStatus = findViewById(R.id.ui_projer_view_creatorStatus);
 		mCreatorStatus.setImageResource(R.drawable.ic_wait);
 		
-		setSupportActionBar(mToolbar);
+	}
+	
+	void setUI() {
+		
+		// Настройка Toolbar
+		setSupportActionBar(mToolbar); 
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
 		
 	}
 	

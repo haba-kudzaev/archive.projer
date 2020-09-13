@@ -3,6 +3,7 @@
 	
 	<string name="activity_main">@string/app_name</string>
 	<string name="activity_projer">Настройка проекта</string>
+	<string name="activity_settings">Настройки Projer</string>
 	
 	<string name="action_createProject">Создать проект</string>
 	

@@ -31,6 +31,7 @@ import o1310.rx1310.app.aideweb.projer.R;
 import o1310.rx1310.app.aideweb.projer.activity.MainActivity;
 import o1310.rx1310.app.aideweb.projer.adapter.TheFragmentPagerAdapter;
 import o1310.rx1310.app.aideweb.projer.fragment.SimpleProjectsFragment;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -90,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         switch(id) {
 
             case R.id.menu_main_about :
-				// Action
+				startActivity(new Intent(this, SettingsActivity.class));
 				return true;
 				
         }

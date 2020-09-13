@@ -52,6 +52,30 @@
 			android:fitsSystemWindows="true"
 			android:name=".activity.ProjerActivity"
 			android:label="@string/activity_projer"/>
+		
+		<activity
+			android:label="@string/activity_settings"
+			android:theme="@style/AppTheme.Preferences"
+			android:name=".activity.SettingsActivity">
+
+			<intent-filter>
+				
+				<action android:name="android.intent.action.APPLICATION_PREFERENCES" />
+				<action android:name="android.intent.action.VIEW" />
+				
+				<category android:name="com.cyanogenmod.category.LAUNCHER_PREFERENCES" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE"/>
+                
+				<data android:host="projer.settings" android:scheme="rx1310"/>
+					
+			</intent-filter>
+
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="o1310.rx1310.app.aideweb.projer.activity.MainActivity"/>
+
+		</activity>
 			
 	</application>
 

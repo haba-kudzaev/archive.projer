@@ -1,26 +1,40 @@
 apply plugin: 'com.android.application'
 
 android {
+	
     compileSdkVersion 29
     
 
     defaultConfig {
+		
         applicationId "o1310.rx1310.app.aideweb.projer"
         minSdkVersion 14
         targetSdkVersion 29
-        versionCode 1
-        versionName "1.0"
+        versionCode 200913
+        versionName "1"
+		
     }
+	
     buildTypes {
+		
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+		
     }
+	
 }
 
 dependencies {
-	api 'com.android.support:support-v4:27.+'
+	
+	implementation 'android.arch.core:common:+'
+	implementation 'android.arch.core:runtime:+'
+	
+	implementation 'com.android.support:support-v4:27.+'
+	implementation 'com.android.support:design:27.+'
+	implementation 'com.android.support:appcompat-v7:27.+'
+	
 	implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'android.arch.core:runtime:1.1.1'
+	
 }

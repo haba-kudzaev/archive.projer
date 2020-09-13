@@ -6,19 +6,41 @@
 
 package o1310.rx1310.app.aideweb.projer.utility;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.support.design.widget.Snackbar;
-import android.view.View;
+import android.content.Intent;
+import android.net.Uri;
 import android.widget.Toast;
 
 public class AppUtils {
 	
 	public static void Toast(Context context, String message) {
-		Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+		Toast.makeText(context, message, Toast.LENGTH_LONG).show();
 	}
 
-	public static void Snackbar(View view, String message) {
-		Snackbar.make(view, message, 2000).show();
+	public static void sendReport(Context context, String subject, String message) {
+
+		Intent i = new Intent(Intent.ACTION_SEND);
+		i.setType("message/rfc822");
+		i.putExtra(Intent.EXTRA_EMAIL, new String[]{"rx1310@inbox.ru"});
+		i.putExtra(Intent.EXTRA_SUBJECT, subject);
+		i.putExtra(Intent.EXTRA_TEXT, message);
+
+		try { 
+			context.startActivity(Intent.createChooser(i, "Send with")); 
+		} catch (ActivityNotFoundException e) {
+			AppUtils.Toast(context, "App not found!");
+		}
+
+	}
+
+	public static void openURL(Context context, String link) {
+
+		Intent i = new Intent(Intent.ACTION_VIEW);
+		i.setData(Uri.parse(link));
+		i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		context.startActivity(i);
+
 	}
 	
 }

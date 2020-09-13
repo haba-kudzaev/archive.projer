@@ -17,8 +17,10 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import o1310.rx1310.app.aideweb.projer.R;
+import android.content.Intent;
+import o1310.rx1310.app.aideweb.projer.activity.ProjerActivity;
 
-public class SampleProjectsFragment extends ListFragment {
+public class SimpleProjectsFragment extends ListFragment {
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -35,11 +37,7 @@ public class SampleProjectsFragment extends ListFragment {
 		switch (p) {
 
 			case 0:
-				//startActivity(new Intent(getActivity(), ProjectCreatorActivity.class));
-				break;
-
-			case 1:
-				// Toast.makeText(getActivity(), "Pos" + p, Toast.LENGTH_LONG).show();
+				startActivity(new Intent(getActivity(), ProjerActivity.class));
 				break;
 
 			default: break;

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	
-	<string name="tab_projects_samples">Обычные проекты</string>
+	<string name="activity_main">@string/app_name</string>
+	<string name="activity_projer">Создать проект</string>
+	
+	<string name="tab_projects_simple">Простые проекты</string>
 	<string name="tab_projects_bootstrap">Bootstrap</string>
 	<string name="tab_projects_jquery">jQuery</string>
 	<string name="tab_projects_vuejs">Vue.js</string>

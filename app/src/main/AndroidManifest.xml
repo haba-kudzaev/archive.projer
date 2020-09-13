@@ -31,7 +31,8 @@
 		<activity
 			android:theme="@style/AppTheme.NoActionBar"
 			android:fitsSystemWindows="true"
-			android:name=".activity.MainActivity">
+			android:name=".activity.MainActivity"
+			android:label="@string/activity_main">
 
             <intent-filter>
 
@@ -45,6 +46,12 @@
             </intent-filter>
 
         </activity>
+		
+		<activity
+			android:theme="@style/AppTheme.NoActionBar"
+			android:fitsSystemWindows="true"
+			android:name=".activity.ProjerActivity"
+			android:label="@string/activity_projer"/>
 			
 	</application>
 

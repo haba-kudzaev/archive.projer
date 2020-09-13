@@ -30,7 +30,7 @@ import android.view.MenuItem;
 import o1310.rx1310.app.aideweb.projer.R;
 import o1310.rx1310.app.aideweb.projer.activity.MainActivity;
 import o1310.rx1310.app.aideweb.projer.adapter.TheFragmentPagerAdapter;
-import o1310.rx1310.app.aideweb.projer.fragment.SampleProjectsFragment;
+import o1310.rx1310.app.aideweb.projer.fragment.SimpleProjectsFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -67,10 +67,10 @@ public class MainActivity extends AppCompatActivity {
 
 		TheFragmentPagerAdapter a = new TheFragmentPagerAdapter(getSupportFragmentManager());
 
-		a.addFragment(new SampleProjectsFragment(), getString(R.string.tab_projects_samples));
-		a.addFragment(new SampleProjectsFragment(), getString(R.string.tab_projects_bootstrap));
-		a.addFragment(new SampleProjectsFragment(), getString(R.string.tab_projects_jquery));
-		a.addFragment(new SampleProjectsFragment(), getString(R.string.tab_projects_vuejs));
+		a.addFragment(new SimpleProjectsFragment(), getString(R.string.tab_projects_simple));
+		a.addFragment(new SimpleProjectsFragment(), getString(R.string.tab_projects_bootstrap));
+		a.addFragment(new SimpleProjectsFragment(), getString(R.string.tab_projects_jquery));
+		a.addFragment(new SimpleProjectsFragment(), getString(R.string.tab_projects_vuejs));
 		
 		vp.setAdapter(a);
 
@@ -90,9 +90,8 @@ public class MainActivity extends AppCompatActivity {
         switch(id) {
 
             case R.id.menu_main_about :
-				
-                //startActivity(new Intent(this, SettingsActivity.class));
-                return true;
+				// Action
+				return true;
 				
         }
 

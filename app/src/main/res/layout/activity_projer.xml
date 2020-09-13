@@ -20,15 +20,76 @@
 			app:layout_scrollFlags="enterAlways"
 			app:popupTheme="@style/ThemeOverlay.AppCompat"/>
 
+		<TextView
+			android:layout_marginEnd="?android:attr/listPreferredItemPaddingEnd"
+			android:layout_marginStart="?android:attr/listPreferredItemPaddingStart"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"/>
+
 		<EditText
+			android:layout_marginEnd="?android:attr/listPreferredItemPaddingEnd"
+			android:layout_marginStart="?android:attr/listPreferredItemPaddingStart"
 			android:layout_width="match_parent"
 			android:ems="10"
 			android:layout_height="wrap_content"
-			android:inputType="text|textAutoComplete|textAutoCorrect"/>
+			android:inputType="text|textAutoComplete|textAutoCorrect"
+			android:layout_marginBottom="14dp"
+			android:hint="Введите название проекта"/>
 
 	</android.support.design.widget.AppBarLayout>
 
-	
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="10dp"
+		android:layout_marginEnd="?android:attr/listPreferredItemPaddingEnd"
+		android:layout_marginStart="?android:attr/listPreferredItemPaddingStart"
+		android:gravity="top|left"
+		android:layout_marginBottom="14dp">
+
+		<ImageView
+			android:src="@drawable/ic_folder"
+			android:layout_width="25dp"
+			android:layout_height="25dp"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+			android:layout_marginLeft="14dp"/>
+
+	</LinearLayout>
+
+	<View
+		android:layout_marginStart="?android:attr/listPreferredItemPaddingStart"
+		android:background="?android:attr/dividerVertical"
+		android:layout_width="match_parent"
+		android:layout_height="1dp"/>
+
+	<LinearLayout
+		android:orientation="horizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="14dp"
+		android:layout_marginEnd="?android:attr/listPreferredItemPaddingEnd"
+		android:layout_marginStart="?android:attr/listPreferredItemPaddingStart"
+		android:gravity="top|left"
+		android:layout_marginBottom="14dp">
+
+		<ImageView
+			android:src="@drawable/ic_help"
+			android:layout_width="25dp"
+			android:layout_height="25dp"/>
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
+			android:layout_marginLeft="14dp"/>
+
+	</LinearLayout>
 
 </LinearLayout>
 

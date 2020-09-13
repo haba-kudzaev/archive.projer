@@ -1,0 +1,18 @@
+<menu 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<item
+		android:id="@+id/menu_projer_about"
+		android:title="@string/menu_create"
+		android:icon="@drawable/ic_create"
+		app:showAsAction="always"/>
+	
+	<item
+		android:id="@+id/menu_projer_close"
+		android:title="@string/menu_close_window"
+		android:icon="@drawable/ic_close"
+		app:showAsAction="always"/>
+	
+</menu>
+

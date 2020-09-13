@@ -11,8 +11,10 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import o1310.rx1310.app.aideweb.projer.R;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.Toast;
+import o1310.rx1310.app.aideweb.projer.R;
 
 public class ProjerActivity extends AppCompatActivity {
 
@@ -34,5 +36,29 @@ public class ProjerActivity extends AppCompatActivity {
 		Toast.makeText(this, "", Toast.LENGTH_LONG).show();
 		
 	}
+	
+	public boolean onCreateOptionsMenu(Menu menu) {
+		
+		getMenuInflater().inflate(R.menu.projer, menu);
+		
+		return super.onCreateOptionsMenu(menu);
+		
+	}
+
+
+    public boolean onOptionsItemSelected(MenuItem mi) {
+
+        int id = mi.getItemId();
+
+        switch(id) {
+
+            case R.id.menu_projer_close :
+				finish();
+				return true;
+
+        }
+
+        return super.onOptionsItemSelected(mi);
+    }
 	
 }

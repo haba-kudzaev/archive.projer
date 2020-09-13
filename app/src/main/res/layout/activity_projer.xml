@@ -44,7 +44,6 @@
 			android:ems="10"
 			android:layout_height="wrap_content"
 			android:inputType="text|textAutoComplete|textAutoCorrect"
-			android:hint="@string/desc_projer_inputProjectName"
 			android:id="@+id/ui_projer_view_inputProjectName"/>
 
 		<FrameLayout
@@ -63,7 +62,8 @@
 				android:layout_width="24dp"
 				android:layout_height="24dp"
 				android:layout_gravity="left|center"
-				android:id="@+id/ui_projer_view_creatorStatus"/>
+				android:id="@+id/ui_projer_view_creatorStatus"
+				android:visibility="gone"/>
 
 		</FrameLayout>
 

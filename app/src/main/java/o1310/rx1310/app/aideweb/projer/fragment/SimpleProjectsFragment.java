@@ -37,7 +37,8 @@ public class SimpleProjectsFragment extends ListFragment {
 		switch (p) {
 
 			case 0:
-				startActivity(new Intent(getActivity(), ProjerActivity.class));
+				//startActivity(new Intent(getActivity(), ProjerActivity.class));
+				ProjerActivity.startWizard(getActivity(), "a.zip");
 				break;
 
 			default: break;

@@ -6,9 +6,12 @@
 
 package o1310.rx1310.app.aideweb.projer.activity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -16,7 +19,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.Toast;
 import o1310.rx1310.app.aideweb.projer.R;
 import o1310.rx1310.util.unzipper.Unzipper;
 
@@ -26,8 +28,12 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 	Button mCreateProject;
 	EditText mInputProjectName;
 	ImageView mCreatorStatus;
+	
+	String mProjectAssetFile;
+	
 	SharedPreferences mSharedPreferences;
-
+	Intent mIntent;
+	
 	CreatorTask mCreatorTask;
 	
 	@Override
@@ -37,13 +43,20 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		setContentView(R.layout.activity_projer);
 
 		mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-
+		mIntent = getIntent();
+		
+		mProjectAssetFile = mIntent.getStringExtra("PROJECT_ASSET_FILE");
+		
 		mToolbar = findViewById(R.id.ui_view_toolBar);
 		
 		mInputProjectName = findViewById(R.id.ui_projer_view_inputProjectName);
+		mInputProjectName.setHint(R.string.desc_projer_inputProjectName);
 		
 		mCreateProject = findViewById(R.id.ui_projer_view_createProject);
 		mCreateProject.setOnClickListener(this);
+		
+		mCreatorStatus = findViewById(R.id.ui_projer_view_creatorStatus);
+		mCreatorStatus.setImageResource(R.drawable.ic_wait);
 		
 		setSupportActionBar(mToolbar);
 		
@@ -64,6 +77,12 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 
 	}
 	
+	public static void startWizard(Context context, String assetFileName) {
+		Intent intent = new Intent(context, ProjerActivity.class); 
+		intent.putExtra("PROJECT_ASSET_FILE", assetFileName);
+		//intent.putExtra("", etLName.getText().toString());
+		context.startActivity(intent);
+	} 
 	
 	class CreatorTask extends AsyncTask<Void, Void, Void> {
 
@@ -71,19 +90,30 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		protected void onPreExecute() {
 			super.onPreExecute();
 			
+			mCreatorStatus.setVisibility(View.VISIBLE);
+			
 		}
 
 		@Override
 		protected Void doInBackground(Void... params) {
-			//Unzipper.unzipFromAssets(this, "", "");
-			
+			Unzipper.unzipFromAssets(ProjerActivity.this, mProjectAssetFile, "/sdcard/" + mInputProjectName.getText().toString());
 			return null;
 		}
 
 		@Override
 		protected void onPostExecute(Void result) {
 			super.onPostExecute(result);
-			//tvInfo.setText("End");
+			
+			mCreatorStatus.setImageResource(R.drawable.ic_done);
+			
+			// Скрываем иконку
+			Handler handler = new Handler(); 
+			handler.postDelayed(new Runnable() {
+				public void run() {
+					mCreatorStatus.setVisibility(View.GONE);
+				} 
+			}, 2000);
+			
 		}
 		
 	}

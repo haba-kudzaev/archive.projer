@@ -1,13 +1,19 @@
+/*
+ * @author      rx1310 <rx1310@inbox.ru>
+ * @copyright   Copyright (c) o1310, 2020
+ * @license     MIT License
+ */
+
 package o1310.rx1310.app.aideweb.projer.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class TheFragmentPagerAdapter extends FragmentPagerAdapter
- {
+public class TheFragmentPagerAdapter extends FragmentPagerAdapter {
 
 	private final List<Fragment> mFragment = new ArrayList<>();
 	private final List<String> mTitle = new ArrayList<>();
@@ -15,7 +21,6 @@ public class TheFragmentPagerAdapter extends FragmentPagerAdapter
 	public TheFragmentPagerAdapter(FragmentManager m) {
 		super(m);
 	}
-
 
 	public Fragment getItem(int p) {
 		return mFragment.get(p);

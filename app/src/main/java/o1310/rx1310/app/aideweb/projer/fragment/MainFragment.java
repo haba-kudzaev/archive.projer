@@ -1,15 +1,24 @@
+/*
+ * @author      rx1310 <rx1310@inbox.ru>
+ * @copyright   Copyright (c) o1310, 2020
+ * @license     MIT License
+ */
+
 package o1310.rx1310.app.aideweb.projer.fragment;
 
 import android.os.Bundle;
+
 import android.support.v4.app.ListFragment;
+
 import android.view.View;
+
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
 import o1310.rx1310.app.aideweb.projer.R;
 
-public class MainFragment extends ListFragment
- {
+public class MainFragment extends ListFragment {
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -30,7 +39,7 @@ public class MainFragment extends ListFragment
 				break;
 
 			case 1:
-				Toast.makeText(getActivity(), "Pos" + p, Toast.LENGTH_LONG).show();
+				// Toast.makeText(getActivity(), "Pos" + p, Toast.LENGTH_LONG).show();
 				break;
 
 			default: break;

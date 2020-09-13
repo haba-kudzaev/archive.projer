@@ -4,7 +4,7 @@
 	<style name="AppTheme" parent="Theme.AppCompat">
 	    <item name="colorAccent">@color/colorAccent</item>
 		<item name="colorPrimary">@color/colorPrimary</item>
-		<item name="colorPrimaryDark">?colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
 		<item name="colorButtonNormal">@color/colorAccent</item>
 		<item name="colorControlHighlight">@color/colorAccent</item>
 		<item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>

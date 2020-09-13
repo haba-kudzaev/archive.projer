@@ -10,6 +10,7 @@ import android.Manifest;
 
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.content.Intent;
 
 import android.os.Build;
 import android.os.Bundle;
@@ -31,7 +32,6 @@ import o1310.rx1310.app.aideweb.projer.R;
 import o1310.rx1310.app.aideweb.projer.activity.MainActivity;
 import o1310.rx1310.app.aideweb.projer.adapter.TheFragmentPagerAdapter;
 import o1310.rx1310.app.aideweb.projer.fragment.SimpleProjectsFragment;
-import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -77,10 +77,12 @@ public class MainActivity extends AppCompatActivity {
 
 	}
 	
-	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.main, menu);
-		//menu.getItem(1).setVisible(false);
-		return super.onCreateOptionsMenu(menu);
+	public boolean onCreateOptionsMenu(Menu m) {
+		
+		getMenuInflater().inflate(R.menu.main, m);
+		
+		return super.onCreateOptionsMenu(m);
+		
 	}
 
     
@@ -90,13 +92,14 @@ public class MainActivity extends AppCompatActivity {
 
         switch(id) {
 
-            case R.id.menu_main_about :
+            case R.id.menu_main_settings :
 				startActivity(new Intent(this, SettingsActivity.class));
 				return true;
 				
         }
 
         return super.onOptionsItemSelected(mi);
+		
     }
 
 }

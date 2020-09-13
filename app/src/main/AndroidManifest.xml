@@ -51,7 +51,13 @@
 			android:theme="@style/AppTheme.NoActionBar"
 			android:fitsSystemWindows="true"
 			android:name=".activity.ProjerActivity"
-			android:label="@string/activity_projer"/>
+			android:label="@string/activity_projer">
+			
+			<meta-data
+				android:name="android.support.PARENT_ACTIVITY"
+				android:value="o1310.rx1310.app.aideweb.projer.activity.MainActivity"/>
+			
+		</activity>
 		
 		<activity
 			android:label="@string/activity_settings"

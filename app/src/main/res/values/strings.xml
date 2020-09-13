@@ -2,7 +2,9 @@
 <resources>
 	
 	<string name="activity_main">@string/app_name</string>
-	<string name="activity_projer">Создать проект</string>
+	<string name="activity_projer">Настройка проекта</string>
+	
+	<string name="action_createProject">Создать проект</string>
 	
 	<string name="tab_projects_simple">Простые проекты</string>
 	<string name="tab_projects_bootstrap">Bootstrap</string>

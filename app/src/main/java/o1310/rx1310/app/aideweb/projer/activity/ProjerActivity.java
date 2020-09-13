@@ -7,20 +7,29 @@
 package o1310.rx1310.app.aideweb.projer.activity;
 
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 import o1310.rx1310.app.aideweb.projer.R;
+import o1310.rx1310.util.unzipper.Unzipper;
 
-public class ProjerActivity extends AppCompatActivity {
+public class ProjerActivity extends AppCompatActivity implements View.OnClickListener {
 
 	Toolbar mToolbar;
+	Button mCreateProject;
+	EditText mInputProjectName;
+	ImageView mCreatorStatus;
 	SharedPreferences mSharedPreferences;
 
+	CreatorTask mCreatorTask;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -31,34 +40,52 @@ public class ProjerActivity extends AppCompatActivity {
 
 		mToolbar = findViewById(R.id.ui_view_toolBar);
 		
-		setSupportActionBar(mToolbar);
+		mInputProjectName = findViewById(R.id.ui_projer_view_inputProjectName);
 		
-		Toast.makeText(this, "", Toast.LENGTH_LONG).show();
+		mCreateProject = findViewById(R.id.ui_projer_view_createProject);
+		mCreateProject.setOnClickListener(this);
+		
+		setSupportActionBar(mToolbar);
 		
 	}
 	
-	public boolean onCreateOptionsMenu(Menu menu) {
-		
-		getMenuInflater().inflate(R.menu.projer, menu);
-		
-		return super.onCreateOptionsMenu(menu);
+	public void onClick(View v) {
+
+		switch(v.getId()) {
+			
+			case R.id.ui_projer_view_createProject:
+				mCreatorTask = new CreatorTask();
+				mCreatorTask.execute();
+				break;
+
+			default: break;
+
+		}
+
+	}
+	
+	
+	class CreatorTask extends AsyncTask<Void, Void, Void> {
+
+		@Override
+		protected void onPreExecute() {
+			super.onPreExecute();
+			
+		}
+
+		@Override
+		protected Void doInBackground(Void... params) {
+			//Unzipper.unzipFromAssets(this, "", "");
+			
+			return null;
+		}
+
+		@Override
+		protected void onPostExecute(Void result) {
+			super.onPostExecute(result);
+			//tvInfo.setText("End");
+		}
 		
 	}
-
-
-    public boolean onOptionsItemSelected(MenuItem mi) {
-
-        int id = mi.getItemId();
-
-        switch(id) {
-
-            case R.id.menu_projer_close :
-				finish();
-				return true;
-
-        }
-
-        return super.onOptionsItemSelected(mi);
-    }
 	
 }

@@ -25,69 +25,47 @@
 			android:layout_marginStart="?android:attr/listPreferredItemPaddingStart"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:paddingBottom="?android:attr/listPreferredItemPaddingEnd"
 			android:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"/>
-
-		<EditText
-			android:layout_marginEnd="?android:attr/listPreferredItemPaddingEnd"
-			android:layout_marginStart="?android:attr/listPreferredItemPaddingStart"
-			android:layout_width="match_parent"
-			android:ems="10"
-			android:layout_height="wrap_content"
-			android:inputType="text|textAutoComplete|textAutoCorrect"
-			android:layout_marginBottom="14dp"
-			android:hint="Введите название проекта"/>
 
 	</android.support.design.widget.AppBarLayout>
 
 	<LinearLayout
-		android:orientation="horizontal"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="10dp"
 		android:layout_marginEnd="?android:attr/listPreferredItemPaddingEnd"
 		android:layout_marginStart="?android:attr/listPreferredItemPaddingStart"
-		android:gravity="top|left"
-		android:layout_marginBottom="14dp">
-
-		<ImageView
-			android:src="@drawable/ic_folder"
-			android:layout_width="25dp"
-			android:layout_height="25dp"/>
-
-		<TextView
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
-			android:layout_marginLeft="14dp"/>
-
-	</LinearLayout>
-
-	<View
-		android:layout_marginStart="?android:attr/listPreferredItemPaddingStart"
-		android:background="?android:attr/dividerVertical"
-		android:layout_width="match_parent"
-		android:layout_height="1dp"/>
-
-	<LinearLayout
-		android:orientation="horizontal"
+		android:orientation="vertical"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginTop="14dp"
-		android:layout_marginEnd="?android:attr/listPreferredItemPaddingEnd"
-		android:layout_marginStart="?android:attr/listPreferredItemPaddingStart"
-		android:gravity="top|left"
+		android:layout_marginTop="16dp"
 		android:layout_marginBottom="14dp">
 
-		<ImageView
-			android:src="@drawable/ic_help"
-			android:layout_width="25dp"
-			android:layout_height="25dp"/>
-
-		<TextView
+		<EditText
 			android:layout_width="match_parent"
+			android:ems="10"
 			android:layout_height="wrap_content"
-			android:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat"
-			android:layout_marginLeft="14dp"/>
+			android:inputType="text|textAutoComplete|textAutoCorrect"
+			android:hint="@string/desc_projer_inputProjectName"
+			android:id="@+id/ui_projer_view_inputProjectName"/>
+
+		<FrameLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<Button
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/action_createProject"
+				android:layout_gravity="right|center"
+				android:id="@+id/ui_projer_view_createProject"/>
+
+			<ImageView
+				android:src="@drawable/ic_wait"
+				android:layout_width="24dp"
+				android:layout_height="24dp"
+				android:layout_gravity="left|center"
+				android:id="@+id/ui_projer_view_creatorStatus"/>
+
+		</FrameLayout>
 
 	</LinearLayout>
 

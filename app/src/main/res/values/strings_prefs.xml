@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+	<string name="pref_category_more">Дополнительно</string>
+	
+	<string name="pref_default_dir">Каталог для проектов</string>
+	<string name="pref_default_dir_summary">Папка, в которой будут созданы новые проекты.\n\nТекущ. папка: </string>
+	<string name="pref_default_dir_dlgTitle">Имя папки</string>
+	
+	<string name="pref_run_aide">Запуск AIDE Web</string>
+	<string name="pref_run_aide_summary">Выполнить запуск среды разработки после создания проекта?</string>
+	
+</resources>

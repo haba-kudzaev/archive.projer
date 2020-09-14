@@ -21,6 +21,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import o1310.rx1310.app.aideweb.projer.R;
 import o1310.rx1310.util.unzipper.Unzipper;
+import android.text.TextUtils;
 
 public class ProjerActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -87,10 +88,11 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 	}
 	
 	public static void startWizard(Context context, String assetFileName) {
-		Intent intent = new Intent(context, ProjerActivity.class); 
+		
+		Intent intent = new Intent(context, ProjerActivity.class);
 		intent.putExtra("PROJECT_ASSET_FILE", assetFileName);
-		//intent.putExtra("", etLName.getText().toString());
 		context.startActivity(intent);
+		
 	} 
 	
 	class CreatorTask extends AsyncTask<Void, Void, Void> {
@@ -105,8 +107,11 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 
 		@Override
 		protected Void doInBackground(Void... params) {
-			Unzipper.unzipFromAssets(ProjerActivity.this, mProjectAssetFile, "/sdcard/" + mInputProjectName.getText().toString());
+			
+			Unzipper.unzipFromAssets(ProjerActivity.this, mProjectAssetFile, "/sdcard/_projer/" + mInputProjectName.getText().toString());
+			
 			return null;
+			
 		}
 
 		@Override

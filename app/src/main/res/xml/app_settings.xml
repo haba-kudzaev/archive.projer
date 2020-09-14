@@ -2,6 +2,15 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-	<!-- Hello, world! -->
+	<EditTextPreference
+		android:icon="@android:color/transparent"
+		android:key="et"
+		android:title="@string/pref_default_dir"
+		android:summary="@string/pref_default_dir_summary"
+		android:defaultValue="AppProjects"
+		android:dialogTitle="@string/pref_default_dir_dlgTitle" />
+	
+	<o1310.rx1310.app.aideweb.projer.ui.preference.CategoryPreference
+		android:title="@string/pref_category_more"/>
 	
 </PreferenceScreen>

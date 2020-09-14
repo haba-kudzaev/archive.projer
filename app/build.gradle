@@ -10,8 +10,8 @@ android {
         applicationId "o1310.rx1310.app.aideweb.projer"
         minSdkVersion 14
         targetSdkVersion 29
-        versionCode 200913
-        versionName "1"
+        versionCode 2020
+        versionName "experimental"
 		
     }
 	

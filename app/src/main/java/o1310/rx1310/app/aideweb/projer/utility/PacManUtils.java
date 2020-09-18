@@ -7,8 +7,10 @@
 package o1310.rx1310.app.aideweb.projer.utility;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 
 public class PacManUtils {
 	
@@ -75,6 +77,22 @@ public class PacManUtils {
 			exc.printStackTrace();
 			return "e: appVersionCode()";
 		}
+		
+	}
+	
+	public static void startApp(Context context, String packageName) {
+		
+		Intent i = context.getPackageManager().getLaunchIntentForPackage(packageName);
+		
+		if (i == null) {
+			
+			i = new Intent(Intent.ACTION_VIEW);
+			i.setData(Uri.parse("market://details?id=" + packageName));
+			
+		}
+		
+		i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		context.startActivity(i);
 		
 	}
 

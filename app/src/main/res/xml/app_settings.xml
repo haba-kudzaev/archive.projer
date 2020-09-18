@@ -11,6 +11,13 @@
 		android:dialogTitle="@string/pref_default_dir_dlgTitle" />
 	
 	<o1310.rx1310.app.aideweb.projer.ui.preference.CategoryPreference
-		android:title="@string/pref_category_more"/>
+		android:title="@string/pref_category_aideweb"/>
+	
+	<SwitchPreference
+		android:icon="@android:color/transparent"
+		android:key="runAideAfterProjectCreation"
+		android:title="@string/pref_run_aide"
+		android:summary="@string/pref_run_aide_summary"
+		android:defaultValue="false" />
 	
 </PreferenceScreen>

@@ -22,6 +22,7 @@ import android.widget.ImageView;
 import o1310.rx1310.app.aideweb.projer.R;
 import o1310.rx1310.util.unzipper.Unzipper;
 import android.text.TextUtils;
+import o1310.rx1310.app.aideweb.projer.utility.PacManUtils;
 
 public class ProjerActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -30,7 +31,8 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 	EditText mInputProjectName;
 	ImageView mCreatorStatus;
 	
-	String mProjectAssetFile;
+	String mProjectAssetFile, mDefaultDir4Projects;
+	boolean mRunAideAfterProjectCreation;
 	
 	SharedPreferences mSharedPreferences;
 	Intent mIntent;
@@ -47,6 +49,8 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		mIntent = getIntent();
 		
 		mProjectAssetFile = mIntent.getStringExtra("PROJECT_ASSET_FILE");
+		mDefaultDir4Projects = mSharedPreferences.getString("defaultDir", "AppProjects");
+		mRunAideAfterProjectCreation = mSharedPreferences.getBoolean("runAideAfterProjectCreation", false);
 		
 		mToolbar = findViewById(R.id.ui_view_toolBar);
 		
@@ -108,9 +112,11 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		@Override
 		protected Void doInBackground(Void... params) {
 			
-			String projCreateDir = mSharedPreferences.getString("defaultDir", "AppProjects");
+			Unzipper.unzipFromAssets(ProjerActivity.this, mProjectAssetFile, "/sdcard/_projer/" + mDefaultDir4Projects + "/" + mInputProjectName.getText().toString());
 			
-			Unzipper.unzipFromAssets(ProjerActivity.this, mProjectAssetFile, "/sdcard/_projer/" + projCreateDir + "/" + mInputProjectName.getText().toString());
+			if (mRunAideAfterProjectCreation) {
+				PacManUtils.startApp(ProjerActivity.this, "com.android.settings");
+			}
 			
 			return null;
 			

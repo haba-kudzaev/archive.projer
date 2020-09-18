@@ -4,7 +4,7 @@
 
 	<EditTextPreference
 		android:icon="@android:color/transparent"
-		android:key="et"
+		android:key="defaultDir"
 		android:title="@string/pref_default_dir"
 		android:summary="@string/pref_default_dir_summary"
 		android:defaultValue="AppProjects"

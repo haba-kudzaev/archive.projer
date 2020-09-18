@@ -108,7 +108,9 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		@Override
 		protected Void doInBackground(Void... params) {
 			
-			Unzipper.unzipFromAssets(ProjerActivity.this, mProjectAssetFile, "/sdcard/_projer/" + mInputProjectName.getText().toString());
+			String projCreateDir = mSharedPreferences.getString("defaultDir", "AppProjects");
+			
+			Unzipper.unzipFromAssets(ProjerActivity.this, mProjectAssetFile, "/sdcard/_projer/" + projCreateDir + "/" + mInputProjectName.getText().toString());
 			
 			return null;
 			

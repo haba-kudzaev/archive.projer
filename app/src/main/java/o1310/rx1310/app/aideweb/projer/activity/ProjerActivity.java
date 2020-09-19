@@ -81,8 +81,18 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		switch(v.getId()) {
 			
 			case R.id.ui_projer_view_createProject:
-				mCreatorTask = new CreatorTask();
-				mCreatorTask.execute();
+				
+				if (TextUtils.isEmpty(mInputProjectName.getText().toString())) {
+					
+					mInputProjectName.setError(getString(R.string.msg_error_emptyProjectName));
+					
+				} else {
+					
+					mCreatorTask = new CreatorTask();
+					mCreatorTask.execute();
+					
+				}
+				
 				break;
 
 			default: break;

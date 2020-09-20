@@ -15,6 +15,7 @@
 		android:title="@string/pref_category_aideweb"/>
 	
 	<Preference
+		android:selectable="false"
 		android:icon="@android:color/transparent"
 		android:key="aideInstalledStatus"
 		android:title="@string/pref_aideweb_installed_status"/>

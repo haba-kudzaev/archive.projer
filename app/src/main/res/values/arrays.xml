@@ -3,9 +3,22 @@
 	
 	<!-- Example projects -->
 	<string-array name="projects_sample">
-		<item>HTML + CSS</item>
-		<item>HTML + CSS + JavaScript</item>
-		<item>HTML + JavaScript</item>
+		<item>HTML &amp; CSS (базовый вариант)</item>
+		<item>HTML, CSS &amp; JavaScript</item>
+		<item>HTML, CSS &amp; JavaScript (jQuery 3.5.1)</item>
+		<item>HTML, CSS &amp; JavaScript (jQuery 3.5.1 CDN)</item>
+		<item>HTML, CSS &amp; JavaScript (jQuery 2.2.4)</item>
+		<item>HTML, CSS &amp; JavaScript (jQuery 2.2.4 CDN)</item>
+		<item>List item</item>
+		<item>List item</item>
+		<item>List item</item>
+		<item>List item</item>
+		<item>List item</item>
+		<item>List item</item>
+		<item>List item</item>
+		<item>List item</item>
+		<item>List item</item>
+		<item>List item</item>
 	</string-array>
 	
 </resources>

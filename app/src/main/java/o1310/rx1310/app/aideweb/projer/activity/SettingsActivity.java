@@ -56,7 +56,7 @@ public class SettingsActivity extends PreferenceActivity {
 	String aideWebInstalledStatus() {
 		
 		if (PacManUtils.checkAppInstall(this, mAideWebPackageName)) {
-			return "true";
+			return "true | version: " + PacManUtils.getAppVersion$name(this, mAideWebPackageName) + " (" + PacManUtils.getAppVersion$code(this, mAideWebPackageName) + ")";
 		} else {
 			return "false";
 		}

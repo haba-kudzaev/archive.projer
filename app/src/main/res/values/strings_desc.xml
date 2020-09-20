@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	
-	<string name="desc_projer_inputProjectName">Введите название проекта</string>
+	<string name="desc_project_sample_htmlCss">Простой проект на базе «Hello, world», с подключенными (пустыми) стилями CSS.</string>
 	
 </resources>

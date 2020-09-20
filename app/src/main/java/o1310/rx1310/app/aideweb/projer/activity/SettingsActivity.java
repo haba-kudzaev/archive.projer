@@ -14,6 +14,8 @@ import android.preference.PreferenceManager;
 import android.widget.ListView;
 
 import o1310.rx1310.app.aideweb.projer.R;
+import android.preference.Preference;
+import o1310.rx1310.app.aideweb.projer.utility.PacManUtils;
 
 public class SettingsActivity extends PreferenceActivity {
 
@@ -21,6 +23,9 @@ public class SettingsActivity extends PreferenceActivity {
 	SharedPreferences mSharedPreferences;
 	
 	EditTextPreference defaultDir;
+	Preference appVersion, aideInstalledStatus;
+
+	String mAideWebPackageName;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +35,8 @@ public class SettingsActivity extends PreferenceActivity {
 		
 		mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 		
+		mAideWebPackageName = mSharedPreferences.getString("dbg_aideCustomPackageName", "com.aide.web");
+		
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 
 		mListView = findViewById(android.R.id.list);
@@ -37,6 +44,22 @@ public class SettingsActivity extends PreferenceActivity {
 
 		defaultDir = (EditTextPreference) findPreference("defaultDir");
 		defaultDir.setSummary(getString(R.string.pref_default_dir_summary));
+		
+		aideInstalledStatus = findPreference("aideInstalledStatus");
+		aideInstalledStatus.setSummary(aideWebInstalledStatus());
+		
+		appVersion = findPreference("appVersion");
+		appVersion.setSummary(PacManUtils.getAppVersion$name(this, getPackageName()) + "." + PacManUtils.getAppVersion$code(this, getPackageName()));
+		
+	}
+	
+	String aideWebInstalledStatus() {
+		
+		if (PacManUtils.checkAppInstall(this, mAideWebPackageName)) {
+			return "true";
+		} else {
+			return "false";
+		}
 		
 	}
 	

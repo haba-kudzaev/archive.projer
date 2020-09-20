@@ -3,12 +3,30 @@
 	
 	<string name="pref_category_aideweb">AIDE Web</string>
 	<string name="pref_category_more">Дополнительно</string>
+	<string name="pref_category_dbg">Отладка</string>
 	
 	<string name="pref_default_dir">Каталог для проектов</string>
 	<string name="pref_default_dir_summary" formatted="false">Папка, в которой будут созданы новые проекты</string>
 	<string name="pref_default_dir_dlgTitle">Имя папки</string>
 	
-	<string name="pref_run_aide">Запуск AIDE Web</string>
-	<string name="pref_run_aide_summary">Выполнить запуск среды разработки после создания проекта?</string>
+	<!-- AIDE Web -->
+	<string name="pref_aideweb_installed_status">Статус установки</string>
+	<string name="pref_aideweb_uninstall">Удалить AIDE Web</string>
+	<string name="pref_aideweb_autorun">Запуск AIDE Web</string>
+	<string name="pref_aideweb_autorun_summary">Выполнить запуск среды разработки после создания проекта?</string>
+	
+	<!-- Отладка -->
+	<string name="pref_dbg_allow_empty_project_name">Проекты без имени</string>
+	<string name="pref_dbg_show_test_tabs">Тестовые вкладки</string>
+	<string name="pref_dbg_aideweb_custom_package_name">Имя пакета AIDE Web</string>
+	<string name="pref_dbg_aideweb_custom_package_name_dlgTitle">Имя пакета AIDE Web</string>
+	
+	<!-- Дополнительно -->
+	<string name="pref_more_app_version">Версия приложения</string>
+	<string name="pref_more_app_dev">Разработчик</string>
+	<string name="pref_more_app_dev_summary">rx1310 (from «o1310»)</string>
+	<string name="pref_more_app_uninstall">Удалить приложение</string>
+	<string name="pref_more_app_source_code">Исходный код</string>
+	<string name="pref_more_app_source_code_summary">Projer является проектом с открытым исходным кодом и бесплатно распространяется по лицензии MIT</string>
 	
 </resources>

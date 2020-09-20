@@ -23,15 +23,17 @@ import o1310.rx1310.app.aideweb.projer.R;
 import o1310.rx1310.util.unzipper.Unzipper;
 import android.text.TextUtils;
 import o1310.rx1310.app.aideweb.projer.utility.PacManUtils;
+import android.widget.TextView;
 
 public class ProjerActivity extends AppCompatActivity implements View.OnClickListener {
 
 	Toolbar mToolbar;
 	Button mCreateProject;
 	EditText mInputProjectName;
-	ImageView mCreatorStatus;
+	ImageView mCreatorStatusView;
+	TextView mProjectDescView;
 	
-	String mProjectAssetFile, mDefaultDir4Projects;
+	String mProjectAssetFile, mProjectDesc, mDefaultDir4Projects, mAideWebPackageName;
 	boolean mRunAideAfterProjectCreation;
 	
 	SharedPreferences mSharedPreferences;
@@ -49,7 +51,11 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		mIntent = getIntent();
 		
 		mProjectAssetFile = mIntent.getStringExtra("PROJECT_ASSET_FILE");
+		mProjectDesc = mIntent.getStringExtra("PROJECT_DESC");
+		
 		mDefaultDir4Projects = mSharedPreferences.getString("defaultDir", "AppProjects");
+		mAideWebPackageName = mSharedPreferences.getString("dbg_aideCustomPackageName", "com.aide.web");
+		
 		mRunAideAfterProjectCreation = mSharedPreferences.getBoolean("runAideAfterProjectCreation", false);
 		
 		mToolbar = findViewById(R.id.ui_view_toolBar);
@@ -57,13 +63,16 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		setUI();
 		
 		mInputProjectName = findViewById(R.id.ui_projer_view_inputProjectName);
-		mInputProjectName.setHint(R.string.desc_projer_inputProjectName);
+		mInputProjectName.setHint(R.string.hint_projer_inputProjectName);
 		
 		mCreateProject = findViewById(R.id.ui_projer_view_createProject);
 		mCreateProject.setOnClickListener(this);
 		
-		mCreatorStatus = findViewById(R.id.ui_projer_view_creatorStatus);
-		mCreatorStatus.setImageResource(R.drawable.ic_wait);
+		mCreatorStatusView = findViewById(R.id.ui_projer_view_creatorStatus);
+		mCreatorStatusView.setImageResource(R.drawable.ic_wait);
+		
+		mProjectDescView = findViewById(R.id.ui_projer_view_textProjectDesc);
+		mProjectDescView.setText(mProjectDesc);
 		
 	}
 	
@@ -101,11 +110,12 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 
 	}
 	
-	public static void startWizard(Context context, String assetFileName) {
+	public static void startWizard(Context context, String assetFileName, String projectDesc) {
 		
-		Intent intent = new Intent(context, ProjerActivity.class);
-		intent.putExtra("PROJECT_ASSET_FILE", assetFileName);
-		context.startActivity(intent);
+		Intent i = new Intent(context, ProjerActivity.class);
+		i.putExtra("PROJECT_ASSET_FILE", assetFileName);
+		i.putExtra("PROJECT_DESC", projectDesc);
+		context.startActivity(i);
 		
 	} 
 	
@@ -115,7 +125,7 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		protected void onPreExecute() {
 			super.onPreExecute();
 			
-			mCreatorStatus.setVisibility(View.VISIBLE);
+			mCreatorStatusView.setVisibility(View.VISIBLE);
 			
 		}
 
@@ -125,7 +135,7 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 			Unzipper.unzipFromAssets(ProjerActivity.this, mProjectAssetFile, "/sdcard/_projer/" + mDefaultDir4Projects + "/" + mInputProjectName.getText().toString());
 			
 			if (mRunAideAfterProjectCreation) {
-				PacManUtils.startApp(ProjerActivity.this, "com.android.settings");
+				PacManUtils.startApp(ProjerActivity.this, mAideWebPackageName);
 			}
 			
 			return null;
@@ -136,13 +146,13 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		protected void onPostExecute(Void result) {
 			super.onPostExecute(result);
 			
-			mCreatorStatus.setImageResource(R.drawable.ic_done);
+			mCreatorStatusView.setImageResource(R.drawable.ic_done);
 			
 			// Скрываем иконку
 			Handler handler = new Handler(); 
 			handler.postDelayed(new Runnable() {
 				public void run() {
-					mCreatorStatus.setVisibility(View.GONE);
+					mCreatorStatusView.setVisibility(View.GONE);
 				} 
 			}, 2000);
 			

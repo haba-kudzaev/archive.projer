@@ -8,16 +8,82 @@
 		android:title="@string/pref_default_dir"
 		android:summary="@string/pref_default_dir_summary"
 		android:defaultValue="AppProjects"
-		android:dialogTitle="@string/pref_default_dir_dlgTitle" />
+		android:dialogTitle="@string/pref_default_dir_dlgTitle"/>
 	
+	<!-- AIDE Web -->
 	<o1310.rx1310.app.aideweb.projer.ui.preference.CategoryPreference
 		android:title="@string/pref_category_aideweb"/>
+	
+	<Preference
+		android:icon="@android:color/transparent"
+		android:key="aideInstalledStatus"
+		android:title="@string/pref_aideweb_installed_status"/>
 	
 	<SwitchPreference
 		android:icon="@android:color/transparent"
 		android:key="runAideAfterProjectCreation"
-		android:title="@string/pref_run_aide"
-		android:summary="@string/pref_run_aide_summary"
-		android:defaultValue="false" />
+		android:title="@string/pref_aideweb_autorun"
+		android:summary="@string/pref_aideweb_autorun_summary"
+		android:defaultValue="false"/>
+	
+	<Preference
+		android:icon="@android:color/transparent"
+		android:key="aideUninstall"
+		android:title="@string/pref_aideweb_uninstall"/>
+		
+	<!-- Debug -->
+	<o1310.rx1310.app.aideweb.projer.ui.preference.BorderPreference />
+		
+	<o1310.rx1310.app.aideweb.projer.ui.preference.CategoryPreference
+		android:title="@string/pref_category_dbg"/>
+
+	<SwitchPreference
+		android:enabled="false"
+		android:icon="@android:color/transparent"
+		android:key="dbg_allowEmptyProjectName"
+		android:title="@string/pref_dbg_allow_empty_project_name"
+		android:defaultValue="false"/>
+	
+	<SwitchPreference
+		android:enabled="false"
+		android:icon="@android:color/transparent"
+		android:key="dbg_showTestTabs"
+		android:title="@string/pref_dbg_show_test_tabs"
+		android:defaultValue="false"/>
+	
+	<EditTextPreference
+		android:icon="@android:color/transparent"
+		android:key="dbg_aideCustomPackageName"
+		android:title="@string/pref_dbg_aideweb_custom_package_name"
+		android:defaultValue="com.aide.web"
+		android:dialogTitle="@string/pref_dbg_aideweb_custom_package_name_dlgTitle"/>
+	
+	<o1310.rx1310.app.aideweb.projer.ui.preference.BorderPreference />
+		
+	<!-- More -->
+	<o1310.rx1310.app.aideweb.projer.ui.preference.CategoryPreference
+		android:title="@string/pref_category_more"/>
+	
+	<Preference
+		android:icon="@android:color/transparent"
+		android:key="appUninstall"
+		android:title="@string/pref_more_app_uninstall"/>
+	
+	<Preference
+		android:icon="@android:color/transparent"
+		android:key="appDev"
+		android:title="@string/pref_more_app_dev"
+		android:summary="@string/pref_more_app_dev_summary"/>
+	
+	<Preference
+		android:icon="@android:color/transparent"
+		android:key="appSourceCode"
+		android:title="@string/pref_more_app_source_code"
+		android:summary="@string/pref_more_app_source_code_summary"/>
+	
+	<Preference
+		android:icon="@android:color/transparent"
+		android:key="appVersion"
+		android:title="@string/pref_more_app_version"/>
 	
 </PreferenceScreen>

@@ -84,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
 		return super.onCreateOptionsMenu(m);
 		
 	}
-
     
     public boolean onOptionsItemSelected(MenuItem mi) {
 

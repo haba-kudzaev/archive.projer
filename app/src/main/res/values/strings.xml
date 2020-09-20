@@ -7,7 +7,12 @@
 	
 	<string name="action_createProject">Создать проект</string>
 	
+	<string name="hint_projer_inputProjectName">Имя проекта</string>
+	
 	<string name="msg_error_emptyProjectName">Введите имя проекта!</string>
+	
+	<string name="status_installed">Установлено</string>
+	<string name="status_not_installed">Не установлено</string>
 	
 	<string name="tab_projects_simple">Простые проекты</string>
 	<string name="tab_projects_bootstrap">Bootstrap</string>

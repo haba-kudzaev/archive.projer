@@ -95,5 +95,15 @@ public class PacManUtils {
 		context.startActivity(i);
 		
 	}
+	
+	public static void uninstallApp(Context context, String packageName) {
+		
+		Intent i = new Intent(Intent.ACTION_DELETE);
+		
+		i.setData(Uri.parse("package:" + packageName));
+		
+		context.startActivity(i);
+		
+	}
 
 }

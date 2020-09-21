@@ -38,7 +38,7 @@ public class SimpleProjectsFragment extends ListFragment {
 
 			case 0:
 				//startActivity(new Intent(getActivity(), ProjerActivity.class));
-				ProjerActivity.startWizard(getActivity(), "a.zip", getString(R.string.desc_project_sample_htmlCss));
+				ProjerActivity.startWizard(getActivity(), "test.zip", getString(R.string.desc_project_sample_htmlCss));
 				break;
 
 			default: break;

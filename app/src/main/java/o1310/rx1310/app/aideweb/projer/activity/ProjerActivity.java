@@ -9,21 +9,29 @@ package o1310.rx1310.app.aideweb.projer.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+
 import android.preference.PreferenceManager;
+
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+
 import android.view.View;
+
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import o1310.rx1310.app.aideweb.projer.R;
-import o1310.rx1310.util.unzipper.Unzipper;
-import android.text.TextUtils;
-import o1310.rx1310.app.aideweb.projer.utility.PacManUtils;
 import android.widget.TextView;
+
+import android.text.TextUtils;
+
+import o1310.rx1310.util.unzipper.Unzipper;
+
+import o1310.rx1310.app.aideweb.projer.R;
+import o1310.rx1310.app.aideweb.projer.utility.PacManUtils;
 
 public class ProjerActivity extends AppCompatActivity implements View.OnClickListener {
 

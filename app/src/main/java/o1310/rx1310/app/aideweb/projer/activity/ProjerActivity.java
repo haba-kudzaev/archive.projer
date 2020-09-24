@@ -39,7 +39,7 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 	Button mCreateProject;
 	EditText mInputProjectName;
 	ImageView mCreatorStatusView;
-	TextView mProjectDescView;
+	TextView mProjectDescView, mInfoCurrentDir;
 	
 	String mProjectAssetFile, mProjectDesc, mDefaultDir4Projects, mAideWebPackageName;
 	boolean mRunAideAfterProjectCreation;
@@ -81,6 +81,9 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		
 		mProjectDescView = findViewById(R.id.ui_projer_view_textProjectDesc);
 		mProjectDescView.setText(mProjectDesc);
+		
+		mInfoCurrentDir = findViewById(R.id.ui_projer_view_info_currentDir);
+		mInfoCurrentDir.setText(String.format(getString(R.string.projer_info_currentDir), mDefaultDir4Projects));
 		
 	}
 	
@@ -134,6 +137,7 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 			super.onPreExecute();
 			
 			mCreatorStatusView.setVisibility(View.VISIBLE);
+			mCreateProject.setEnabled(false);
 			
 		}
 
@@ -160,7 +164,10 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 			Handler handler = new Handler(); 
 			handler.postDelayed(new Runnable() {
 				public void run() {
+					
 					mCreatorStatusView.setVisibility(View.GONE);
+					mCreateProject.setEnabled(true);
+					
 				} 
 			}, 2000);
 			

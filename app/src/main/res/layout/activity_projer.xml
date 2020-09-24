@@ -106,8 +106,8 @@
 			<TextView
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus pharetra tincidunt. Nullam ac ipsum at justo maximus consectetur. Sed nec semper ligula. Maecenas venenatis faucibus sapien, vel ullamcorper nulla commodo eu."
-				android:layout_marginLeft="16dp"/>
+				android:layout_marginLeft="16dp"
+				android:id="@+id/ui_projer_view_info_currentDir"/>
 
 		</LinearLayout>
 
@@ -133,8 +133,8 @@
 			<TextView
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus pharetra tincidunt. Nullam ac ipsum at justo maximus consectetur. Sed nec semper ligula. Maecenas venenatis faucibus sapien, vel ullamcorper nulla commodo eu."
-				android:layout_marginLeft="16dp"/>
+				android:layout_marginLeft="16dp"
+				android:id="@+id/ui_projer_view_info_autorunAideStatus"/>
 
 		</LinearLayout>
 
@@ -153,15 +153,15 @@
 			android:gravity="top|left">
 
 			<ImageView
-				android:src="@drawable/ic_projer"
+				android:src="@drawable/ic_history"
 				android:layout_width="24dp"
 				android:layout_height="24dp"/>
 
 			<TextView
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus pharetra tincidunt. Nullam ac ipsum at justo maximus consectetur. Sed nec semper ligula. Maecenas venenatis faucibus sapien, vel ullamcorper nulla commodo eu."
-				android:layout_marginLeft="16dp"/>
+				android:layout_marginLeft="16dp"
+				android:id="@+id/ui_projer_view_info_recentProjectName"/>
 
 		</LinearLayout>
 
@@ -180,14 +180,14 @@
 			android:gravity="top|left">
 
 			<ImageView
-				android:src="@drawable/ic_projer"
+				android:src="@drawable/ic_warning"
 				android:layout_width="24dp"
 				android:layout_height="24dp"/>
 
 			<TextView
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus pharetra tincidunt. Nullam ac ipsum at justo maximus consectetur. Sed nec semper ligula. Maecenas venenatis faucibus sapien, vel ullamcorper nulla commodo eu."
+				android:text="@string/projer_info_inputTip"
 				android:layout_marginLeft="16dp"/>
 
 		</LinearLayout>

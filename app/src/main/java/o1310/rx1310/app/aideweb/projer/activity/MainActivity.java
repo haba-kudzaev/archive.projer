@@ -38,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
 	Toolbar mToolbar;
 	ViewPager mViewPager;
 	TabLayout mTabLayout;
+	
+	boolean dbg_showTestTabs;
+	
 	SharedPreferences mSharedPreferences;
 
 	@Override
@@ -47,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_main);
 		
 		mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+		
+		dbg_showTestTabs = mSharedPreferences.getBoolean("dbg_showTestTabs", false);
 		
 		mToolbar = findViewById(R.id.ui_view_toolBar);
 		mViewPager = findViewById(R.id.ui_view_viewPager);
@@ -69,9 +74,12 @@ public class MainActivity extends AppCompatActivity {
 		TheFragmentPagerAdapter a = new TheFragmentPagerAdapter(getSupportFragmentManager());
 
 		a.addFragment(new SimpleProjectsFragment(), getString(R.string.tab_projects_simple));
-		a.addFragment(new SimpleProjectsFragment(), getString(R.string.tab_projects_bootstrap));
-		a.addFragment(new SimpleProjectsFragment(), getString(R.string.tab_projects_jquery));
-		a.addFragment(new SimpleProjectsFragment(), getString(R.string.tab_projects_vuejs));
+		
+		if (dbg_showTestTabs) {
+			a.addFragment(new SimpleProjectsFragment(), getString(R.string.tab_projects_bootstrap));
+			a.addFragment(new SimpleProjectsFragment(), getString(R.string.tab_projects_jquery));
+			a.addFragment(new SimpleProjectsFragment(), getString(R.string.tab_projects_vuejs));
+		}
 		
 		vp.setAdapter(a);
 

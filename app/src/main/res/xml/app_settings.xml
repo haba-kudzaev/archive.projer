@@ -46,10 +46,11 @@
 		android:defaultValue="false"/>
 	
 	<SwitchPreference
-		android:enabled="false"
+		android:enabled="true"
 		android:icon="@android:color/transparent"
 		android:key="dbg_showTestTabs"
 		android:title="@string/pref_dbg_show_test_tabs"
+		android:summary="@string/pref_dbg_request_restart"
 		android:defaultValue="false"/>
 	
 	<EditTextPreference

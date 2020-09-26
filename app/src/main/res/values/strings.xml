@@ -13,7 +13,8 @@
 	
 	<string name="projer_info_currentDir" formatted="false">Проект будет создан в папке %1$s в памяти устройства.</string>
 	<string name="projer_info_autorunAideStatus" formatted="false">После создания проекта среда разработки %1$s запущена.</string>
-	<string name="projer_info_recentProjectName">Последний созданный проект:</string>
+	<string name="projer_info_autorunAideStatus_will_be">будет</string>
+	<string name="projer_info_autorunAideStatus_will_not">не будет</string>
 	<string name="projer_info_inputTip">При указании в названии проекта знака «/» будет создана папка!</string>
 	
 	<string name="tab_projects_simple">Простые проекты</string>

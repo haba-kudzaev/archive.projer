@@ -39,7 +39,7 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 	Button mCreateProject;
 	EditText mInputProjectName;
 	ImageView mCreatorStatusView;
-	TextView mProjectDescView, mInfoCurrentDir;
+	TextView mProjectDescView, mInfoCurrentDir, mInfoAideAutorun;
 	
 	String mProjectAssetFile, mProjectDesc, mDefaultDir4Projects, mAideWebPackageName;
 	boolean mRunAideAfterProjectCreation;
@@ -85,6 +85,9 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		mInfoCurrentDir = findViewById(R.id.ui_projer_view_info_currentDir);
 		mInfoCurrentDir.setText(String.format(getString(R.string.projer_info_currentDir), mDefaultDir4Projects));
 		
+		mInfoAideAutorun = findViewById(R.id.ui_projer_view_info_autorunAideStatus);
+		mInfoAideAutorun.setText(String.format(getString(R.string.projer_info_autorunAideStatus), autoRunAideStatus()));
+		
 	}
 	
 	void setUI() {
@@ -129,6 +132,16 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		context.startActivity(i);
 		
 	} 
+	
+	String autoRunAideStatus() {
+		
+		if (mRunAideAfterProjectCreation) {
+			return getString(R.string.projer_info_autorunAideStatus_will_be);
+		} else {
+			return getString(R.string.projer_info_autorunAideStatus_will_not);
+		}
+		
+	}
 	
 	class CreatorTask extends AsyncTask<Void, Void, Void> {
 

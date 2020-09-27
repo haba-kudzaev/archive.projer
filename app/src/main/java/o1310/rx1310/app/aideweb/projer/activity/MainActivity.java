@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 	boolean dbg_showTestTabs;
 	
 	SharedPreferences mSharedPreferences;
-
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 		if (Build.VERSION.SDK_INT >= 23 && (ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED)) {
             ActivityCompat.requestPermissions(MainActivity.this, new String []{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
         }
-
+		
 	}
 	
 	private void setViewPager(ViewPager vp) {

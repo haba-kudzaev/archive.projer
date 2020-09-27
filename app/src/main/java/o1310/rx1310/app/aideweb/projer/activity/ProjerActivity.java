@@ -67,8 +67,11 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		mRunAideAfterProjectCreation = mSharedPreferences.getBoolean("runAideAfterProjectCreation", false);
 		
 		mToolbar = findViewById(R.id.ui_view_toolBar);
+		mToolbar.setNavigationIcon(R.drawable.ic_close);
 		
-		setUI();
+		setSupportActionBar(mToolbar); 
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
 		
 		mInputProjectName = findViewById(R.id.ui_projer_view_inputProjectName);
 		mInputProjectName.setHint(R.string.hint_projer_inputProjectName);
@@ -87,15 +90,6 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		
 		mInfoAideAutorun = findViewById(R.id.ui_projer_view_info_autorunAideStatus);
 		mInfoAideAutorun.setText(String.format(getString(R.string.projer_info_autorunAideStatus), autoRunAideStatus()));
-		
-	}
-	
-	void setUI() {
-		
-		// Настройка Toolbar
-		setSupportActionBar(mToolbar); 
-		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		getSupportActionBar().setDisplayShowHomeEnabled(true);
 		
 	}
 	

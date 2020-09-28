@@ -11,11 +11,11 @@
 	
 	<string name="msg_error_emptyProjectName">Введите имя проекта!</string>
 	
-	<string name="projer_info_currentDir" formatted="false">Проект будет создан в папке %1$s в памяти устройства.</string>
-	<string name="projer_info_autorunAideStatus" formatted="false">После создания проекта среда разработки %1$s запущена.</string>
+	<string name="projer_info_currentDir" formatted="false">После нажатия кнопки «Создать» проект будет создан в папке %1$s во внутренней памяти устройства. Сменить папку, в которой будут созданы проекты, можно в настройках Projer.</string>
+	<string name="projer_info_autorunAideStatus" formatted="false">Также учтите, что после создания проекта среда разработки %1$s запущена. Вы также можете изменить это в настройках.</string>
 	<string name="projer_info_autorunAideStatus_will_be">будет</string>
 	<string name="projer_info_autorunAideStatus_will_not">не будет</string>
-	<string name="projer_info_inputTip">При указании в названии проекта знака «/» будет создана папка!</string>
+	<string name="projer_info_inputTip">Обратите внимание на то, что если в названии проекта использовать символ «/» будет создана папка!\n\nНапр.: The/Project -> будет создан проект «Project» в папке «The».</string>
 	
 	<string name="tab_projects_simple">Простые проекты</string>
 	<string name="tab_projects_bootstrap">Bootstrap</string>

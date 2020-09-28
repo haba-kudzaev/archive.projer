@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	
+	<!-- Prefs -->
+	<string-array name="pref_dbg_other_options">
+		<item>Удалить AIDE Web</item>
+		<item>Удалить Projer</item>
+	</string-array>
+	
 	<!-- Example projects -->
 	<string-array name="projects_sample">
-		<item>HTML &amp; CSS (базовый вариант)</item>
-		<item>List item</item>
-		<item>List item</item>
+		<item>HTML &amp; CSS</item>
+		<item>HTML &amp; CSS, JavaScript</item>
+		<item>HTML &amp; JavaScript</item>
 		<item>List item</item>
 		<item>List item</item>
 		<item>List item</item>

@@ -6,7 +6,8 @@
 
 package o1310.rx1310.app.aideweb.projer.activity;
 
-import android.app.Dialog;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.EditTextPreference;
@@ -14,7 +15,6 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
-import android.view.Window;
 import android.widget.ListView;
 import o1310.rx1310.app.aideweb.projer.R;
 import o1310.rx1310.app.aideweb.projer.utility.AppUtils;
@@ -60,12 +60,8 @@ public class SettingsActivity extends PreferenceActivity {
 
 		switch (p.getKey()) {
 
-			case "aideUninstall":
-				PacManUtils.uninstallApp(this, mAideWebPackageName);
-				break;
-				
-			case "appUninstall":
-				PacManUtils.uninstallApp(this, getPackageName());
+			case "dbg_other":
+				dbgOtherPrefsDialog();
 				break;
 				
 			case "appSourceCode":
@@ -90,6 +86,37 @@ public class SettingsActivity extends PreferenceActivity {
 		} else {
 			return "false";
 		}
+		
+	}
+	
+	// Диалог "Прочее" | Debug
+	void dbgOtherPrefsDialog() {
+		
+		AlertDialog.Builder b = new AlertDialog.Builder(SettingsActivity.this);
+
+		b.setTitle(R.string.pref_dbg_other);
+		b.setItems(R.array.pref_dbg_other_options, new DialogInterface.OnClickListener() {
+
+				public void onClick(DialogInterface d, int itemPos) {
+
+					if (itemPos == 0) {
+						PacManUtils.uninstallApp(SettingsActivity.this, mAideWebPackageName);
+					}
+
+					if (itemPos == 1) {
+						PacManUtils.uninstallApp(SettingsActivity.this, getPackageName());
+					}
+
+				}
+			});
+			
+		b.setPositiveButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface d, int i) {
+				d.dismiss();
+			}
+		});
+
+		b.show();
 		
 	}
 	

@@ -26,11 +26,6 @@
 		android:title="@string/pref_aideweb_autorun"
 		android:summary="@string/pref_aideweb_autorun_summary"
 		android:defaultValue="false"/>
-	
-	<Preference
-		android:icon="@android:color/transparent"
-		android:key="aideUninstall"
-		android:title="@string/pref_aideweb_uninstall"/>
 		
 	<!-- Debug -->
 	<o1310.rx1310.app.aideweb.projer.ui.preference.BorderPreference />
@@ -60,16 +55,16 @@
 		android:defaultValue="com.aide.web"
 		android:dialogTitle="@string/pref_dbg_aideweb_custom_package_name_dlgTitle"/>
 	
+	<Preference
+		android:icon="@android:color/transparent"
+		android:key="dbg_other"
+		android:title="@string/pref_dbg_other"/>
+	
 	<o1310.rx1310.app.aideweb.projer.ui.preference.BorderPreference />
 		
 	<!-- More -->
 	<o1310.rx1310.app.aideweb.projer.ui.preference.CategoryPreference
 		android:title="@string/pref_category_more"/>
-	
-	<Preference
-		android:icon="@android:color/transparent"
-		android:key="appUninstall"
-		android:title="@string/pref_more_app_uninstall"/>
 	
 	<Preference
 		android:icon="@android:color/transparent"

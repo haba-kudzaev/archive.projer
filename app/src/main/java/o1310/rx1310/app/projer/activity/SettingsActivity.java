@@ -4,7 +4,7 @@
  * @license     MIT License
  */
 
-package o1310.rx1310.app.aideweb.projer.activity;
+package o1310.rx1310.app.projer.activity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -16,9 +16,9 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.widget.ListView;
-import o1310.rx1310.app.aideweb.projer.R;
-import o1310.rx1310.app.aideweb.projer.utility.AppUtils;
-import o1310.rx1310.app.aideweb.projer.utility.PacManUtils;
+import o1310.rx1310.app.projer.R;
+import o1310.rx1310.app.projer.utility.AppUtils;
+import o1310.rx1310.app.projer.utility.PacManUtils;
 
 public class SettingsActivity extends PreferenceActivity {
 

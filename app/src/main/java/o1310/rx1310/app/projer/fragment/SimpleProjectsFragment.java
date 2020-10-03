@@ -4,7 +4,7 @@
  * @license     MIT License
  */
 
-package o1310.rx1310.app.aideweb.projer.fragment;
+package o1310.rx1310.app.projer.fragment;
 
 import android.os.Bundle;
 
@@ -18,8 +18,8 @@ import android.widget.Toast;
 
 import android.content.Intent;
 
-import o1310.rx1310.app.aideweb.projer.R;
-import o1310.rx1310.app.aideweb.projer.activity.ProjerActivity;
+import o1310.rx1310.app.projer.R;
+import o1310.rx1310.app.projer.activity.ProjerActivity;
 
 public class SimpleProjectsFragment extends ListFragment {
 

@@ -4,7 +4,7 @@
  * @license     MIT License
  */
 
-package o1310.rx1310.app.aideweb.projer.activity;
+package o1310.rx1310.app.projer.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -28,8 +28,8 @@ import android.widget.TextView;
 
 import android.text.TextUtils;
 
-import o1310.rx1310.app.aideweb.projer.R;
-import o1310.rx1310.app.aideweb.projer.utility.PacManUtils;
+import o1310.rx1310.app.projer.R;
+import o1310.rx1310.app.projer.utility.PacManUtils;
 
 import rx1310.lib.unzipper.Unzipper;
 

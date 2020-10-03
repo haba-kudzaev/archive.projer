@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
-    package="o1310.rx1310.app.aideweb.projer">
+    package="o1310.rx1310.app.projer">
 
-	<original-package android:name="o1310.rx1310.app.aideweb.projer"/>
+	<original-package android:name="o1310.rx1310.app.projer"/>
 
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
@@ -73,7 +73,7 @@
 
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
-				android:value="o1310.rx1310.app.aideweb.projer.activity.MainActivity"/>
+				android:value="o1310.rx1310.app.projer.activity.MainActivity"/>
 
 		</activity>
 			

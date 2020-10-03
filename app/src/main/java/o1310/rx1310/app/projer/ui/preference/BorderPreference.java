@@ -4,12 +4,12 @@
  * @license     MIT License
  */
 
-package o1310.rx1310.app.aideweb.projer.ui.preference;
+package o1310.rx1310.app.projer.ui.preference;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
-import o1310.rx1310.app.aideweb.projer.R;
+import o1310.rx1310.app.projer.R;
 
 public class BorderPreference extends CategoryPreference {
 

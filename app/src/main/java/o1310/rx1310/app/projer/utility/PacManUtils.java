@@ -4,7 +4,7 @@
  * @license     MIT License
  */
 
-package o1310.rx1310.app.aideweb.projer.utility;
+package o1310.rx1310.app.projer.utility;
 
 import android.content.Context;
 import android.content.Intent;

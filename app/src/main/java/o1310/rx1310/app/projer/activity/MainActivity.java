@@ -4,7 +4,7 @@
  * @license     MIT License
  */
 
-package o1310.rx1310.app.aideweb.projer.activity;
+package o1310.rx1310.app.projer.activity;
 
 import android.Manifest;
 
@@ -28,10 +28,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import o1310.rx1310.app.aideweb.projer.R;
-import o1310.rx1310.app.aideweb.projer.activity.MainActivity;
-import o1310.rx1310.app.aideweb.projer.adapter.TheFragmentPagerAdapter;
-import o1310.rx1310.app.aideweb.projer.fragment.SimpleProjectsFragment;
+import o1310.rx1310.app.projer.R;
+import o1310.rx1310.app.projer.activity.MainActivity;
+import o1310.rx1310.app.projer.adapter.TheFragmentPagerAdapter;
+import o1310.rx1310.app.projer.fragment.SimpleProjectsFragment;
 
 public class MainActivity extends AppCompatActivity {
 

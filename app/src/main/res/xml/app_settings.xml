@@ -7,11 +7,11 @@
 		android:key="defaultDir"
 		android:title="@string/pref_default_dir"
 		android:summary="@string/pref_default_dir_summary"
-		android:defaultValue="AppProjects"
+		android:defaultValue="AppProjects/Projer"
 		android:dialogTitle="@string/pref_default_dir_dlgTitle"/>
 	
 	<!-- AIDE Web -->
-	<o1310.rx1310.app.aideweb.projer.ui.preference.CategoryPreference
+	<o1310.rx1310.app.projer.ui.preference.CategoryPreference
 		android:title="@string/pref_category_aideweb"/>
 	
 	<Preference
@@ -28,9 +28,9 @@
 		android:defaultValue="false"/>
 		
 	<!-- Debug -->
-	<o1310.rx1310.app.aideweb.projer.ui.preference.BorderPreference />
+	<o1310.rx1310.app.projer.ui.preference.BorderPreference />
 		
-	<o1310.rx1310.app.aideweb.projer.ui.preference.CategoryPreference
+	<o1310.rx1310.app.projer.ui.preference.CategoryPreference
 		android:title="@string/pref_category_dbg"/>
 
 	<SwitchPreference
@@ -60,10 +60,10 @@
 		android:key="dbg_other"
 		android:title="@string/pref_dbg_other"/>
 	
-	<o1310.rx1310.app.aideweb.projer.ui.preference.BorderPreference />
+	<o1310.rx1310.app.projer.ui.preference.BorderPreference />
 		
 	<!-- More -->
-	<o1310.rx1310.app.aideweb.projer.ui.preference.CategoryPreference
+	<o1310.rx1310.app.projer.ui.preference.CategoryPreference
 		android:title="@string/pref_category_more"/>
 	
 	<Preference

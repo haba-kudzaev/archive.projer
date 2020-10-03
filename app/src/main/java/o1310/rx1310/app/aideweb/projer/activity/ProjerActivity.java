@@ -28,10 +28,10 @@ import android.widget.TextView;
 
 import android.text.TextUtils;
 
-import o1310.rx1310.util.unzipper.Unzipper;
-
 import o1310.rx1310.app.aideweb.projer.R;
 import o1310.rx1310.app.aideweb.projer.utility.PacManUtils;
+
+import rx1310.lib.unzipper.Unzipper;
 
 public class ProjerActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -139,6 +139,8 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 	
 	class CreatorTask extends AsyncTask<Void, Void, Void> {
 
+		String projExtractPath = "/sdcard/" + mDefaultDir4Projects + "/" + mInputProjectName.getText().toString();
+		
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
@@ -151,7 +153,7 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		@Override
 		protected Void doInBackground(Void... params) {
 			
-			Unzipper.unzipFromAssets(ProjerActivity.this, mProjectAssetFile, "/sdcard/_projer/" + mDefaultDir4Projects + "/" + mInputProjectName.getText().toString());
+			Unzipper.unzipFromAssets(ProjerActivity.this, mProjectAssetFile, projExtractPath);
 			
 			if (mRunAideAfterProjectCreation) {
 				PacManUtils.startApp(ProjerActivity.this, mAideWebPackageName);

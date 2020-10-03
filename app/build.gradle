@@ -4,7 +4,6 @@ android {
 	
     compileSdkVersion 29
     
-
     defaultConfig {
 		
         applicationId "o1310.rx1310.app.aideweb.projer"
@@ -27,6 +26,8 @@ android {
 }
 
 dependencies {
+	
+	implementation project(':libUnzipper')
 	
 	implementation 'android.arch.core:common:+'
 	implementation 'android.arch.core:runtime:+'

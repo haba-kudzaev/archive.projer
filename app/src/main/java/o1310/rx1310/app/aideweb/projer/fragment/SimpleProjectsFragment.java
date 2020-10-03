@@ -37,11 +37,26 @@ public class SimpleProjectsFragment extends ListFragment {
 
 		switch (p) {
 
+			// htmlCss
 			case 0:
-				//startActivity(new Intent(getActivity(), ProjerActivity.class));
 				ProjerActivity.startWizard(getActivity(), "proj_sample_htmlCss.zip", getString(R.string.desc_project_sample_htmlCss));
 				break;
+				
+			// htmlCssJs
+			case 1:
+				ProjerActivity.startWizard(getActivity(), "proj_sample_htmlCssJs.zip", getString(R.string.desc_project_sample_htmlCssJs));
+				break;
+				
+			// htmlJs
+			case 2:
+				ProjerActivity.startWizard(getActivity(), "proj_sample_htmlJs.zip", getString(R.string.desc_project_sample_htmlJs));
+				break;
 
+			// js
+			case 3:
+				ProjerActivity.startWizard(getActivity(), "proj_sample_js.zip", getString(R.string.desc_project_sample_js));
+				break;
+				
 			default: break;
 
 		}

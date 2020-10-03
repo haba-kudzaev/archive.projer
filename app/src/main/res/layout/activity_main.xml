@@ -12,7 +12,7 @@
 		android:layout_height="wrap_content"
 		android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
 
-		<TextView
+		<!--TextView
 			android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
 			android:paddingStart="?android:attr/listPreferredItemPaddingStart"
 			android:layout_width="match_parent"
@@ -23,7 +23,7 @@
 			android:gravity="center"
 			android:background="#FFC54545"
 			android:textStyle="bold"
-			android:textColor="#FFFFFFFF"/>
+			android:textColor="#FFFFFFFF"/-->
 
 		<android.support.v7.widget.Toolbar
 			android:id="@+id/ui_view_toolBar"

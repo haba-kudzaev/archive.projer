@@ -7,15 +7,20 @@
 package o1310.rx1310.app.projer.activity;
 
 import android.app.AlertDialog;
+
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+
 import android.os.Bundle;
+
 import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
+
 import android.widget.ListView;
+
 import o1310.rx1310.app.projer.R;
 import o1310.rx1310.app.projer.utility.AppUtils;
 import o1310.rx1310.app.projer.utility.PacManUtils;
@@ -65,7 +70,7 @@ public class SettingsActivity extends PreferenceActivity {
 				break;
 				
 			case "appSourceCode":
-				AppUtils.openURL(this, "https://github.com/rx1310/aideweb-projer");
+				AppUtils.openURL(this, "https://github.com/rx1310/projer");
 				break;
 				
 			case "appDev":

@@ -6,7 +6,10 @@
 
 package o1310.rx1310.app.projer.activity;
 
+import android.app.AlertDialog;
+
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
@@ -19,14 +22,14 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
+import android.text.TextUtils;
+
 import android.view.View;
 
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import android.text.TextUtils;
 
 import o1310.rx1310.app.projer.R;
 import o1310.rx1310.app.projer.utility.PacManUtils;
@@ -91,6 +94,13 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		mInfoAideAutorun = findViewById(R.id.ui_projer_view_info_autorunAideStatus);
 		mInfoAideAutorun.setText(String.format(getString(R.string.projer_info_autorunAideStatus), autoRunAideStatus()));
 		
+		// Если поле ввода папки для проектов пустое
+		if (TextUtils.isEmpty(mDefaultDir4Projects)) {
+			emptyDefaultDirMessage();
+			mCreateProject.setEnabled(false);
+			mInputProjectName.setEnabled(false);
+		}
+		
 	}
 	
 	public void onClick(View v) {
@@ -134,6 +144,29 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		} else {
 			return getString(R.string.projer_info_autorunAideStatus_will_not);
 		}
+		
+	}
+	
+	void emptyDefaultDirMessage() {
+		
+		AlertDialog.Builder b = new AlertDialog.Builder(ProjerActivity.this);
+
+		b.setTitle(R.string.app_name);
+		b.setIcon(R.drawable.ic_warning);
+		b.setMessage(R.string.msg_error_emptyDefaultDir);
+		b.setCancelable(false);
+		b.setPositiveButton(R.string.activity_settings, new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface d, int i) {
+				startActivity(new Intent(ProjerActivity.this, SettingsActivity.class));
+			}
+		});
+		b.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+			public void onClick(DialogInterface d, int i) {
+				finish();
+			}
+		});
+
+		b.show();
 		
 	}
 	

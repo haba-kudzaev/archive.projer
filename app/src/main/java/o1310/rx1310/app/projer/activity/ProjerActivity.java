@@ -71,7 +71,15 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		
 		mToolbar = findViewById(R.id.ui_view_toolBar);
 		mToolbar.setNavigationIcon(R.drawable.ic_close);
-		
+		/*mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(ProjerActivity.this, MainActivity.class);
+				startActivity(intent);
+				finish();
+			}
+		});*/
+			
 		setSupportActionBar(mToolbar); 
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -121,7 +129,7 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 				}
 				
 				break;
-
+				
 			default: break;
 
 		}

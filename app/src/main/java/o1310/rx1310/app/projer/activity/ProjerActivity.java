@@ -97,7 +97,12 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		mProjectDescView.setText(mProjectDesc);
 		
 		mInfoCurrentDir = findViewById(R.id.ui_projer_view_info_currentDir);
-		mInfoCurrentDir.setText(String.format(getString(R.string.projer_info_currentDir), mDefaultDir4Projects));
+		
+		if (TextUtils.isEmpty(mDefaultDir4Projects)) {
+			mInfoCurrentDir.setText(R.string.msg_error_emptyDefaultDir);
+		} else {
+			mInfoCurrentDir.setText(String.format(getString(R.string.projer_info_currentDir), mDefaultDir4Projects));
+		}
 		
 		mInfoAideAutorun = findViewById(R.id.ui_projer_view_info_autorunAideStatus);
 		mInfoAideAutorun.setText(String.format(getString(R.string.projer_info_autorunAideStatus), autoRunAideStatus()));

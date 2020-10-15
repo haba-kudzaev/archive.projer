@@ -35,6 +35,7 @@ import o1310.rx1310.app.projer.R;
 import o1310.rx1310.app.projer.utility.PacManUtils;
 
 import rx1310.lib.unzipper.Unzipper;
+import o1310.rx1310.app.projer.utility.AppUtils;
 
 public class ProjerActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -45,7 +46,7 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 	TextView mProjectDescView, mInfoCurrentDir, mInfoAideAutorun;
 	
 	String mProjectAssetFile, mProjectDesc, mDefaultDir4Projects, mAideWebPackageName;
-	boolean mRunAideAfterProjectCreation;
+	boolean mRunAideAfterProjectCreation, mFinishProjerActivityAfterProjectCreation;
 	
 	SharedPreferences mSharedPreferences;
 	Intent mIntent;
@@ -68,6 +69,7 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		mAideWebPackageName = mSharedPreferences.getString("dbg_aideCustomPackageName", "com.aide.web");
 		
 		mRunAideAfterProjectCreation = mSharedPreferences.getBoolean("runAideAfterProjectCreation", false);
+		mFinishProjerActivityAfterProjectCreation = mSharedPreferences.getBoolean("finishProjerActivityAfterProjectCreation", false);
 		
 		mToolbar = findViewById(R.id.ui_view_toolBar);
 		mToolbar.setNavigationIcon(R.drawable.ic_close);
@@ -215,16 +217,24 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 			
 			mCreatorStatusView.setImageResource(R.drawable.ic_done);
 			
-			// Скрываем иконку
-			Handler handler = new Handler(); 
-			handler.postDelayed(new Runnable() {
-				public void run() {
-					
-					mCreatorStatusView.setVisibility(View.GONE);
-					mCreateProject.setEnabled(true);
-					
-				} 
-			}, 2000);
+			if (mFinishProjerActivityAfterProjectCreation) {
+				finish();
+			} else {
+				
+				// Скрываем иконку
+				Handler handler = new Handler(); 
+				handler.postDelayed(new Runnable() {
+					public void run() {
+
+						mCreatorStatusView.setVisibility(View.GONE);
+						mCreateProject.setEnabled(true);
+
+					} 
+				}, 1000);
+				
+			}
+			
+			AppUtils.Toast(ProjerActivity.this, getString(R.string.msg_done));
 			
 		}
 		

@@ -10,6 +10,13 @@
 		android:defaultValue="AppProjects/Projer"
 		android:dialogTitle="@string/pref_default_dir_dlgTitle"/>
 	
+	<SwitchPreference
+		android:icon="@android:color/transparent"
+		android:key="finishProjerActivityAfterProjectCreation"
+		android:title="@string/pref_finish_activity_after_work"
+		android:summary="@string/pref_finish_activity_after_work_summary"
+		android:defaultValue="false"/>
+	
 	<!-- AIDE Web -->
 	<o1310.rx1310.app.projer.ui.preference.CategoryPreference
 		android:title="@string/pref_category_aideweb"/>

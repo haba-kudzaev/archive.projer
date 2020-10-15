@@ -35,7 +35,7 @@ public class IntroActivity extends AppCompatActivity {
 					overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
 				}
 
-			}, 2200);
+			}, 1000);
 
 	}
 

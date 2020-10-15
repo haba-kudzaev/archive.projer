@@ -9,6 +9,9 @@
 	<string name="pref_default_dir_summary" formatted="false">Папка, в которой будут созданы новые проекты</string>
 	<string name="pref_default_dir_dlgTitle">Имя папки</string>
 	
+	<string name="pref_finish_activity_after_work">Автозакрытие окна</string>
+	<string name="pref_finish_activity_after_work_summary">Закрывать окно «Новый проект» после завершения процесса создания проекта?</string>
+		
 	<!-- AIDE Web -->
 	<string name="pref_aideweb_installed_status">Статус установки</string>
 	<string name="pref_aideweb_autorun">Запуск AIDE Web</string>

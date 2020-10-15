@@ -7,20 +7,16 @@
 package o1310.rx1310.app.projer.activity;
 
 import android.app.AlertDialog;
-
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
-
 import android.os.Bundle;
-
 import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
-
 import android.widget.ListView;
-
 import o1310.rx1310.app.projer.R;
 import o1310.rx1310.app.projer.utility.AppUtils;
 import o1310.rx1310.app.projer.utility.PacManUtils;
@@ -31,7 +27,7 @@ public class SettingsActivity extends PreferenceActivity {
 	SharedPreferences mSharedPreferences;
 	
 	EditTextPreference defaultDir;
-	Preference appVersion, aideInstalledStatus;
+	Preference appVersion, aideInstalledStatus, installInA2IGA;
 
 	String mAideWebPackageName;
 
@@ -59,6 +55,9 @@ public class SettingsActivity extends PreferenceActivity {
 		appVersion = findPreference("appVersion");
 		appVersion.setSummary(PacManUtils.getAppVersion$name(this, getPackageName()) + "." + PacManUtils.getAppVersion$code(this, getPackageName()) + "\n" + PacManUtils.getPackageName(this));
 		
+		installInA2IGA = findPreference("installInA2IGA");
+		installInA2IGA.setSummary(a2igaInstalledStatus());
+		
 	}
 	
 	public boolean onPreferenceTreeClick(PreferenceScreen s, Preference p) {
@@ -76,6 +75,10 @@ public class SettingsActivity extends PreferenceActivity {
 			case "appDev":
 				AppUtils.openURL(this, "https://t.me/rx1310_dev");
 				break;
+				
+			case "installInA2IGA":
+				installInA2IGA();
+				break;
 
 		}
 
@@ -90,6 +93,17 @@ public class SettingsActivity extends PreferenceActivity {
 			return "true | version: " + PacManUtils.getAppVersion$name(this, mAideWebPackageName) + " (" + PacManUtils.getAppVersion$code(this, mAideWebPackageName) + ")";
 		} else {
 			return "false";
+		}
+		
+	}
+	
+	// Статус установки A2IGA
+	String a2igaInstalledStatus() {
+		
+		if (PacManUtils.checkAppInstall(this, "o1310.rx1310.app.a2iga")) {
+			return getString(R.string.pref_more_a2iga_summary);
+		} else {
+			return getString(R.string.pref_more_a2iga_summary) + "\n\n" + getString(R.string.pref_more_a2iga_not_found_summary);
 		}
 		
 	}
@@ -122,6 +136,22 @@ public class SettingsActivity extends PreferenceActivity {
 		});
 
 		b.show();
+		
+	}
+	
+	void installInA2IGA() {
+		
+		if (PacManUtils.checkAppInstall(this, "o1310.rx1310.app.a2iga")) {
+			
+			Intent sendPackageName = new Intent();
+			sendPackageName.setAction(Intent.ACTION_SEND);
+			sendPackageName.putExtra(Intent.EXTRA_TEXT, getPackageName());
+			sendPackageName.setType("text/plain");
+			startActivity(Intent.createChooser(sendPackageName, getString(R.string.pref_more_a2iga_chooser_title)));
+			
+		} else {
+			AppUtils.openURL(this, "https://github.com/o1310/a2iga/releases");
+		}
 		
 	}
 	

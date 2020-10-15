@@ -4,6 +4,7 @@
 	<string name="pref_category_aideweb">AIDE Web</string>
 	<string name="pref_category_more">Дополнительно</string>
 	<string name="pref_category_dbg">Отладка</string>
+	<string name="pref_category_about">О программе</string>
 	
 	<string name="pref_default_dir">Каталог для проектов</string>
 	<string name="pref_default_dir_summary" formatted="false">Папка, в которой будут созданы новые проекты</string>
@@ -26,12 +27,18 @@
 	<string name="pref_dbg_other">Прочее</string>
 	
 	<!-- Дополнительно -->
-	<string name="pref_more_app_version">Версия приложения</string>
-	<string name="pref_more_app_dev">Разработчик</string>
-	<string name="pref_more_app_dev_summary">rx1310 (from «o1310»)</string>
-	<string name="pref_more_app_source_code">Исходный код</string>
-	<string name="pref_more_app_source_code_summary">Projer является проектом с открытым исходным кодом и бесплатно распространяется по лицензии MIT</string>
-	<string name="pref_more_app_faq">FAQ</string>
-	<string name="pref_more_app_faq_summary">Часто задаваемые вопросы по Projer</string>
+	<string name="pref_more_a2iga">Интеграция с A2IGA</string>
+	<string name="pref_more_a2iga_summary">Запускайте Projer в нужный момент не выходя из среды разработки жестом запуска ассистента!</string>
+	<string name="pref_more_a2iga_not_found_summary">A2IGA не установлен! Нажмите, чтобы перейти на страницу загрузки.</string>
+	<string name="pref_more_a2iga_chooser_title">Найдите и выберите «A2IGA»</string>
+	
+	<!-- О программе -->
+	<string name="pref_about_app_version">Версия приложения</string>
+	<string name="pref_about_app_dev">Разработчик</string>
+	<string name="pref_about_app_dev_summary">rx1310 (from «o1310»)</string>
+	<string name="pref_about_app_source_code">Исходный код</string>
+	<string name="pref_about_app_source_code_summary">Projer является проектом с открытым исходным кодом и бесплатно распространяется по лицензии MIT</string>
+	<string name="pref_about_app_faq">FAQ</string>
+	<string name="pref_about_app_faq_summary">Часто задаваемые вопросы по Projer</string>
 	
 </resources>

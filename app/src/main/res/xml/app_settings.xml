@@ -75,26 +75,35 @@
 	
 	<Preference
 		android:icon="@android:color/transparent"
+		android:key="installInA2IGA"
+		android:title="@string/pref_more_a2iga"/>
+	
+	<!-- About -->
+	<o1310.rx1310.app.projer.ui.preference.CategoryPreference
+		android:title="@string/pref_category_about"/>
+	
+	<Preference
+		android:icon="@android:color/transparent"
 		android:key="appDev"
-		android:title="@string/pref_more_app_dev"
-		android:summary="@string/pref_more_app_dev_summary"/>
+		android:title="@string/pref_about_app_dev"
+		android:summary="@string/pref_about_app_dev_summary"/>
 	
 	<Preference
 		android:icon="@android:color/transparent"
 		android:key="appSourceCode"
-		android:title="@string/pref_more_app_source_code"
-		android:summary="@string/pref_more_app_source_code_summary"/>
+		android:title="@string/pref_about_app_source_code"
+		android:summary="@string/pref_about_app_source_code_summary"/>
 	
 	<Preference
 		android:enabled="false"
 		android:icon="@android:color/transparent"
 		android:key="appFAQ"
-		android:title="@string/pref_more_app_faq"
-		android:summary="@string/pref_more_app_faq_summary"/>
+		android:title="@string/pref_about_app_faq"
+		android:summary="@string/pref_about_app_faq_summary"/>
 	
 	<Preference
 		android:icon="@android:color/transparent"
 		android:key="appVersion"
-		android:title="@string/pref_more_app_version"/>
+		android:title="@string/pref_about_app_version"/>
 	
 </PreferenceScreen>

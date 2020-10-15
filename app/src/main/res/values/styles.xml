@@ -34,6 +34,12 @@
 		<item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
 	</style>
+	
+	<style name="AppTheme.Intro" parent="AppTheme.NoActionBar">
+		<item name="android:windowBackground">@drawable/layer_background_intro</item>
+		<item name="android:navigationBarColor">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimary</item>
+    </style>
 
 	<style name="AppTheme.Preferences" parent="AppTheme">
 		<item name="android:windowActionBar">true</item>

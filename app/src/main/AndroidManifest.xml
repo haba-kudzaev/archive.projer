@@ -29,9 +29,9 @@
 		<meta-data android:name="android.max_aspect" android:value="2.1"/>
 
 		<activity
-			android:theme="@style/AppTheme.NoActionBar"
+			android:theme="@style/AppTheme.Intro"
 			android:fitsSystemWindows="true"
-			android:name=".activity.MainActivity"
+			android:name=".activity.IntroActivity"
 			android:label="@string/activity_main">
 
             <intent-filter>
@@ -40,6 +40,12 @@
             </intent-filter>
 
         </activity>
+		
+		<activity
+			android:theme="@style/AppTheme.NoActionBar"
+			android:fitsSystemWindows="true"
+			android:name=".activity.MainActivity"
+			android:label="@string/activity_main"/>
 		
 		<activity
 			android:theme="@style/AppTheme.NoActionBar"

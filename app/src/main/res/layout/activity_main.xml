@@ -33,10 +33,9 @@
 			android:layout_marginStart="?android:attr/listPreferredItemPaddingStart"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:paddingBottom="?android:attr/listPreferredItemPaddingEnd"
-			android:text="@string/activity_main_desc"/>
-		
-		
+			android:text="@string/activity_main_desc"
+			android:paddingBottom="6dp"/>
+
 		<android.support.design.widget.TabLayout
 			android:id="@+id/ui_view_tabLayout"
 			android:layout_width="match_parent"

@@ -16,13 +16,31 @@ import android.net.Uri;
 
 import android.widget.Toast;
 
+import android.view.Gravity;
+
 import o1310.rx1310.app.projer.R;
 
 public class AppUtils {
 	
 	// Показ Toast-сообщения
-	public static void Toast(Context context, String message) {
-		Toast.makeText(context, message, Toast.LENGTH_LONG).show();
+	public static void Toast(Context context, String message, boolean gravityCenter, boolean lengthLong) {
+		
+		int toastDuration;
+		
+		if (lengthLong) {
+			toastDuration = Toast.LENGTH_LONG;
+		} else {
+			toastDuration = Toast.LENGTH_SHORT;
+		}
+		
+		Toast mToast = Toast.makeText(context, message, toastDuration);
+		
+		if (gravityCenter) {
+			mToast.setGravity(Gravity.CENTER, 0, 0);
+		}
+		
+		mToast.show();
+		
 	}
 
 	// Для отправки репортов на почту разработчика
@@ -39,7 +57,7 @@ public class AppUtils {
 		try { 
 			context.startActivity(Intent.createChooser(i, "Send with")); 
 		} catch (ActivityNotFoundException e) {
-			AppUtils.Toast(context, "App not found!");
+			AppUtils.Toast(context, "App not found!", false, true);
 		}
 
 	}

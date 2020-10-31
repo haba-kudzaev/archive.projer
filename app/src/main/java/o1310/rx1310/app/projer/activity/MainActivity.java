@@ -7,21 +7,28 @@
 package o1310.rx1310.app.projer.activity;
 
 import android.Manifest;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+
 import android.os.Build;
 import android.os.Bundle;
+
 import android.preference.PreferenceManager;
+
 import android.support.design.widget.TabLayout;
+
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+
 import android.view.Menu;
 import android.view.MenuItem;
+
 import o1310.rx1310.app.projer.R;
 import o1310.rx1310.app.projer.activity.MainActivity;
 import o1310.rx1310.app.projer.adapter.TheFragmentPagerAdapter;
@@ -104,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
         switch(id) {
 			
 			case android.R.id.home:
-				appDesc();
+				AppUtils.Toast(this, "👨‍💻 with ❤️ by rx1310", true, false);
 				return true;
 
             case R.id.menu_main_settings :

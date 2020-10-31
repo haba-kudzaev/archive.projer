@@ -240,7 +240,7 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 				
 			}
 			
-			AppUtils.Toast(ProjerActivity.this, getString(R.string.msg_done));
+			AppUtils.Toast(ProjerActivity.this, getString(R.string.msg_done), true, true);
 			
 		}
 		

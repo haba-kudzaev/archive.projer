@@ -25,6 +25,7 @@ import android.widget.ListView;
 
 import o1310.rx1310.app.projer.R;
 import o1310.rx1310.app.projer.utility.AppUtils;
+
 import android.support.v7.app.AlertDialog;
 
 public class SettingsActivity extends PreferenceActivity {

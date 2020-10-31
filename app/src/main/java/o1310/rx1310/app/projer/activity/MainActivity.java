@@ -108,6 +108,10 @@ public class MainActivity extends AppCompatActivity {
 				startActivity(new Intent(this, SettingsActivity.class));
 				return true;
 				
+			case R.id.menu_main_report : 
+				AppUtils.sendReport(this);
+				return true;
+				
         }
 
         return super.onOptionsItemSelected(mi);

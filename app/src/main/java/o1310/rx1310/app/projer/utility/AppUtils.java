@@ -26,15 +26,15 @@ public class AppUtils {
 	}
 
 	// Для отправки репортов на почту разработчика
-	public static void sendReport(Context context, String message) {
+	public static void sendReport(Context context) {
 
-		String mailSubject = "REPORT: Projer v" + getAppVersion(context, getPackageName(context));
+		String mailSubject = "REPORT: Projer " + getAppVersion(context, getPackageName(context));
 		
 		Intent i = new Intent(Intent.ACTION_SEND);
 		i.setType("message/rfc822");
-		i.putExtra(Intent.EXTRA_EMAIL, "rx1310@inbox.ru");
+		i.putExtra(Intent.EXTRA_EMAIL, new String[]{"rx1310@inbox.ru"});
 		i.putExtra(Intent.EXTRA_SUBJECT, mailSubject);
-		i.putExtra(Intent.EXTRA_TEXT, message + "\n\n\nPackage name: " + getPackageName(context));
+		i.putExtra(Intent.EXTRA_TEXT, "Что произошло: \n\n\nPackage name: " + getPackageName(context));
 
 		try { 
 			context.startActivity(Intent.createChooser(i, "Send with")); 

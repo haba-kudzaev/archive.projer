@@ -4,7 +4,7 @@
 	<string name="menu_about">О программе</string>
 	<string name="menu_create">Создать</string>
 	<string name="menu_close_window">Закрыть окно</string>
-	<string name="menu_report">Сообщить об ошибке</string>
+	<string name="menu_report">Сообщить о проблеме</string>
 	<string name="menu_settings">Настройки</string>
 	
 </resources>

@@ -64,8 +64,13 @@
 	
 	<Preference
 		android:icon="@android:color/transparent"
-		android:key="dbg_other"
-		android:title="@string/pref_dbg_other"/>
+		android:key="dbg_uninstallAideWeb"
+		android:title="@string/pref_dbg_uninstall_aideweb"/>
+	
+	<Preference
+		android:icon="@android:color/transparent"
+		android:key="dbg_uninstallProjer"
+		android:title="@string/pref_dbg_uninstall_projer"/>
 	
 	<o1310.rx1310.app.projer.ui.preference.BorderPreference />
 		

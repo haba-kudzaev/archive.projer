@@ -4,5 +4,6 @@
 	<string name="app_name" translatable="false">Projer</string>
 	<string name="app_author" translatable="false">rx1310 (o1310)</string>
 	<string name="app_author_url" translatable="false">https://github.com/rx1310</string>
+	<string name="app_desc">Projer - мобильное приложение-дополнение для AIDE Web, которое восполняет (по крайней мере будет восполнять в будущем) список семплов проектов (т.к. в AIDE Web весьма скудный набор стартовых проектов в коллекции).</string>
 	
 </resources>

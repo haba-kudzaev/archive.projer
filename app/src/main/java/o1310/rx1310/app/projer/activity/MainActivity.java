@@ -7,27 +7,21 @@
 package o1310.rx1310.app.projer.activity;
 
 import android.Manifest;
-
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.content.Intent;
-
 import android.os.Build;
 import android.os.Bundle;
-
 import android.preference.PreferenceManager;
-
 import android.support.design.widget.TabLayout;
-
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-
 import android.view.Menu;
 import android.view.MenuItem;
-
 import o1310.rx1310.app.projer.R;
 import o1310.rx1310.app.projer.activity.MainActivity;
 import o1310.rx1310.app.projer.adapter.TheFragmentPagerAdapter;
@@ -59,11 +53,16 @@ public class MainActivity extends AppCompatActivity {
 		dbg_showTestTabs = mSharedPreferences.getBoolean("dbg_showTestTabs", false);
 		
 		mToolbar = findViewById(R.id.ui_view_toolBar);
+		mToolbar.setNavigationIcon(R.drawable.ic_projer);
+		
 		mViewPager = findViewById(R.id.ui_view_viewPager);
 		mTabLayout = findViewById(R.id.ui_view_tabLayout);
 
 		setSupportActionBar(mToolbar);
 		setViewPager(mViewPager);
+		
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		getSupportActionBar().setDisplayShowHomeEnabled(true);
 		
 		mTabLayout.setupWithViewPager(mViewPager);
 		
@@ -103,6 +102,10 @@ public class MainActivity extends AppCompatActivity {
         int id = mi.getItemId();
 
         switch(id) {
+			
+			case android.R.id.home:
+				appDesc();
+				return true;
 
             case R.id.menu_main_settings :
 				startActivity(new Intent(this, SettingsActivity.class));
@@ -117,5 +120,17 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(mi);
 		
     }
+	
+	void appDesc() {
+
+		AlertDialog.Builder b = new AlertDialog.Builder(this);
+		b.setIcon(R.drawable.ic_projer);
+		b.setTitle(R.string.app_name);
+		b.setMessage(R.string.app_desc);
+
+		AlertDialog d = b.create();
+		d.show();
+
+	}
 
 }

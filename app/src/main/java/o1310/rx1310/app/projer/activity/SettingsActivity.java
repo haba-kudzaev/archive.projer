@@ -6,13 +6,14 @@
 
 package o1310.rx1310.app.projer.activity;
 
-import android.app.AlertDialog;
-
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
 import android.os.Bundle;
+
+import android.text.TextUtils;
+// import android.app.AlertDialog;
 
 import android.preference.EditTextPreference;
 import android.preference.Preference;
@@ -24,7 +25,7 @@ import android.widget.ListView;
 
 import o1310.rx1310.app.projer.R;
 import o1310.rx1310.app.projer.utility.AppUtils;
-import android.text.TextUtils;
+import android.support.v7.app.AlertDialog;
 
 public class SettingsActivity extends PreferenceActivity {
 
@@ -69,8 +70,12 @@ public class SettingsActivity extends PreferenceActivity {
 
 		switch (p.getKey()) {
 
-			case "dbg_other":
-				dbgOtherPrefsDialog();
+			case "dbg_uninstallAideWeb":
+				AppUtils.uninstallApp(SettingsActivity.this, mAideWebPackageName);
+				break;
+				
+			case "dbg_uninstallProjer":
+				AppUtils.uninstallApp(SettingsActivity.this, getPackageName());
 				break;
 				
 			case "appSourceCode":
@@ -110,37 +115,6 @@ public class SettingsActivity extends PreferenceActivity {
 		} else {
 			return getString(R.string.pref_more_a2iga_summary) + "\n\n" + getString(R.string.pref_more_a2iga_not_found_summary);
 		}
-		
-	}
-	
-	// Диалог "Прочее" | Debug
-	void dbgOtherPrefsDialog() {
-		
-		AlertDialog.Builder b = new AlertDialog.Builder(SettingsActivity.this);
-
-		b.setTitle(R.string.pref_dbg_other);
-		b.setItems(R.array.pref_dbg_other_options, new DialogInterface.OnClickListener() {
-
-				public void onClick(DialogInterface d, int itemPos) {
-
-					if (itemPos == 0) {
-						AppUtils.uninstallApp(SettingsActivity.this, mAideWebPackageName);
-					}
-
-					if (itemPos == 1) {
-						AppUtils.uninstallApp(SettingsActivity.this, getPackageName());
-					}
-
-				}
-			});
-			
-		b.setPositiveButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-			public void onClick(DialogInterface d, int i) {
-				d.dismiss();
-			}
-		});
-
-		b.show();
 		
 	}
 	

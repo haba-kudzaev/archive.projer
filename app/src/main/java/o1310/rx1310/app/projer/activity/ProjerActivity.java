@@ -6,8 +6,6 @@
 
 package o1310.rx1310.app.projer.activity;
 
-import android.app.AlertDialog;
-
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -21,6 +19,7 @@ import android.preference.PreferenceManager;
 
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.support.v7.app.AlertDialog;
 
 import android.text.TextUtils;
 
@@ -186,7 +185,15 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 	
 	class CreatorTask extends AsyncTask<Void, Void, Void> {
 
-		String projExtractPath = "/sdcard/" + mDefaultDir4Projects + "/" + mInputProjectName.getText().toString();
+		String projExtractPath() {
+			
+			if (AppUtils.getAppVersion(ProjerActivity.this, getPackageName()).contains("b")) {
+				return "/sdcard/.projer_beta/" + mDefaultDir4Projects + "/" + mInputProjectName.getText().toString();
+			} else {
+				return "/sdcard/" + mDefaultDir4Projects + "/" + mInputProjectName.getText().toString();
+			}
+			
+		}
 		
 		@Override
 		protected void onPreExecute() {
@@ -200,7 +207,7 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		@Override
 		protected Void doInBackground(Void... params) {
 			
-			Unzipper.unzipFromAssets(ProjerActivity.this, mProjectAssetFile, projExtractPath);
+			Unzipper.unzipFromAssets(ProjerActivity.this, mProjectAssetFile, projExtractPath());
 			
 			if (mRunAideAfterProjectCreation) {
 				AppUtils.startApp(ProjerActivity.this, mAideWebPackageName);

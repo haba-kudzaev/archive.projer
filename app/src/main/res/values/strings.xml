@@ -2,6 +2,7 @@
 <resources>
 	
 	<string name="activity_main">@string/app_name</string>
+	<string name="activity_main_desc">Тест</string>
 	<string name="activity_projer">Новый проект</string>
 	<string name="activity_settings">Настройки Projer</string>
 	

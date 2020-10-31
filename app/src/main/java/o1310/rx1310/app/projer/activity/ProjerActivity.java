@@ -32,10 +32,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import o1310.rx1310.app.projer.R;
-import o1310.rx1310.app.projer.utility.PacManUtils;
+import o1310.rx1310.app.projer.utility.AppUtils;
 
 import rx1310.lib.unzipper.Unzipper;
-import o1310.rx1310.app.projer.utility.AppUtils;
 
 public class ProjerActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -204,7 +203,7 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 			Unzipper.unzipFromAssets(ProjerActivity.this, mProjectAssetFile, projExtractPath);
 			
 			if (mRunAideAfterProjectCreation) {
-				PacManUtils.startApp(ProjerActivity.this, mAideWebPackageName);
+				AppUtils.startApp(ProjerActivity.this, mAideWebPackageName);
 			}
 			
 			return null;

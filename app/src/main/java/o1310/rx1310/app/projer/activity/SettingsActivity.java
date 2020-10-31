@@ -7,19 +7,24 @@
 package o1310.rx1310.app.projer.activity;
 
 import android.app.AlertDialog;
+
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+
 import android.os.Bundle;
+
 import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
+
 import android.widget.ListView;
+
 import o1310.rx1310.app.projer.R;
 import o1310.rx1310.app.projer.utility.AppUtils;
-import o1310.rx1310.app.projer.utility.PacManUtils;
+import android.text.TextUtils;
 
 public class SettingsActivity extends PreferenceActivity {
 
@@ -53,7 +58,7 @@ public class SettingsActivity extends PreferenceActivity {
 		aideInstalledStatus.setSummary(aideWebInstalledStatus());
 		
 		appVersion = findPreference("appVersion");
-		appVersion.setSummary(PacManUtils.getAppVersion$name(this, getPackageName()) + "." + PacManUtils.getAppVersion$code(this, getPackageName()) + "\n" + PacManUtils.getPackageName(this));
+		appVersion.setSummary(AppUtils.getAppVersion(this, getPackageName()) + "\n" + AppUtils.getPackageName(this));
 		
 		installInA2IGA = findPreference("installInA2IGA");
 		installInA2IGA.setSummary(a2igaInstalledStatus());
@@ -89,8 +94,8 @@ public class SettingsActivity extends PreferenceActivity {
 	// Статус установки AIDE Web
 	String aideWebInstalledStatus() {
 		
-		if (PacManUtils.checkAppInstall(this, mAideWebPackageName)) {
-			return "true | version: " + PacManUtils.getAppVersion$name(this, mAideWebPackageName) + " (" + PacManUtils.getAppVersion$code(this, mAideWebPackageName) + ")";
+		if (AppUtils.checkAppInstall(this, mAideWebPackageName)) {
+			return "true | version: " + AppUtils.getAppVersion(this, mAideWebPackageName);
 		} else {
 			return "false";
 		}
@@ -100,7 +105,7 @@ public class SettingsActivity extends PreferenceActivity {
 	// Статус установки A2IGA
 	String a2igaInstalledStatus() {
 		
-		if (PacManUtils.checkAppInstall(this, "o1310.rx1310.app.a2iga")) {
+		if (AppUtils.checkAppInstall(this, "o1310.rx1310.app.a2iga")) {
 			return getString(R.string.pref_more_a2iga_summary);
 		} else {
 			return getString(R.string.pref_more_a2iga_summary) + "\n\n" + getString(R.string.pref_more_a2iga_not_found_summary);
@@ -119,11 +124,11 @@ public class SettingsActivity extends PreferenceActivity {
 				public void onClick(DialogInterface d, int itemPos) {
 
 					if (itemPos == 0) {
-						PacManUtils.uninstallApp(SettingsActivity.this, mAideWebPackageName);
+						AppUtils.uninstallApp(SettingsActivity.this, mAideWebPackageName);
 					}
 
 					if (itemPos == 1) {
-						PacManUtils.uninstallApp(SettingsActivity.this, getPackageName());
+						AppUtils.uninstallApp(SettingsActivity.this, getPackageName());
 					}
 
 				}
@@ -141,7 +146,7 @@ public class SettingsActivity extends PreferenceActivity {
 	
 	void installInA2IGA() {
 		
-		if (PacManUtils.checkAppInstall(this, "o1310.rx1310.app.a2iga")) {
+		if (AppUtils.checkAppInstall(this, "o1310.rx1310.app.a2iga")) {
 			
 			Intent sendPackageName = new Intent();
 			sendPackageName.setAction(Intent.ACTION_SEND);

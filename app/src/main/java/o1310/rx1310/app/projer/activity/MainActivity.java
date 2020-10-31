@@ -32,6 +32,7 @@ import o1310.rx1310.app.projer.R;
 import o1310.rx1310.app.projer.activity.MainActivity;
 import o1310.rx1310.app.projer.adapter.TheFragmentPagerAdapter;
 import o1310.rx1310.app.projer.fragment.SimpleProjectsFragment;
+import o1310.rx1310.app.projer.utility.AppUtils;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,6 +49,10 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.activity_main);
+		
+		if (AppUtils.getAppVersion(this, getPackageName()).contains("b")) {
+			setTitle(getString(R.string.activity_main) + " (beta)");
+		}
 		
 		mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 		

@@ -6,14 +6,10 @@
 
 package o1310.rx1310.app.projer.activity;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
 import android.os.Bundle;
-
-import android.text.TextUtils;
-// import android.app.AlertDialog;
 
 import android.preference.EditTextPreference;
 import android.preference.Preference;
@@ -21,11 +17,13 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+
 import android.widget.ListView;
 
 import o1310.rx1310.app.projer.R;
 import o1310.rx1310.app.projer.utility.AppUtils;
-
 import android.support.v7.app.AlertDialog;
 
 public class SettingsActivity extends PreferenceActivity {
@@ -133,6 +131,25 @@ public class SettingsActivity extends PreferenceActivity {
 			AppUtils.openURL(this, "https://github.com/o1310/a2iga/releases");
 		}
 		
+	}
+	
+	// диалог со списком изменений
+	void appChangelogDialog() {
+
+		WebView mWebView = new android.webkit.WebView(this);
+		WebSettings mWebSettings = mWebView.getSettings();
+
+		mWebSettings.setJavaScriptEnabled(true);
+
+		mWebView.setWebChromeClient(new android.webkit.WebChromeClient());
+		mWebView.setWebViewClient(new android.webkit.WebViewClient());
+		mWebView.loadUrl("file:///android_res/raw/changelog.html");
+
+		AlertDialog.Builder mAlertBuilder = new android.support.v7.app.AlertDialog.Builder(this);
+		mAlertBuilder.setView(mWebView);
+		mAlertBuilder.setTitle("Changelogs");
+		mAlertBuilder.show();
+
 	}
 	
 }

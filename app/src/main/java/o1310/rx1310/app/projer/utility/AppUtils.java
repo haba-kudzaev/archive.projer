@@ -121,7 +121,7 @@ public class AppUtils {
 
 		} catch (Exception exc) {
 			exc.printStackTrace();
-			return "e: appAppVersion()";
+			return "e: getAppVersion()";
 		}
 		
 	}

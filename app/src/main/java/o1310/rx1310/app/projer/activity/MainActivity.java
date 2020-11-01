@@ -18,16 +18,15 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 
 import android.support.design.widget.TabLayout;
-
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import o1310.rx1310.app.projer.R;
 import o1310.rx1310.app.projer.activity.MainActivity;
@@ -128,16 +127,4 @@ public class MainActivity extends AppCompatActivity {
 		
     }
 	
-	void appDesc() {
-
-		AlertDialog.Builder b = new AlertDialog.Builder(this);
-		b.setIcon(R.drawable.ic_projer);
-		b.setTitle(R.string.app_name);
-		b.setMessage(R.string.app_desc);
-
-		AlertDialog d = b.create();
-		d.show();
-
-	}
-
 }

@@ -40,8 +40,9 @@
 			android:id="@+id/ui_view_tabLayout"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			app:tabMode="scrollable"
-			app:tabGravity="center"
+			android:overScrollMode="never"
+			app:tabGravity="fill"
+            app:tabMode="scrollable"
 			style="@style/AppTheme.TabLayout"/>
 
 	</android.support.design.widget.AppBarLayout>

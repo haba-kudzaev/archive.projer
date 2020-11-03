@@ -162,24 +162,24 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 	
 	void emptyDefaultDirMessage() {
 		
-		AlertDialog.Builder b = new AlertDialog.Builder(ProjerActivity.this);
+		AlertDialog.Builder mAlertBuilder = new AlertDialog.Builder(ProjerActivity.this);
 
-		b.setTitle(R.string.app_name);
-		b.setIcon(R.drawable.ic_warning);
-		b.setMessage(R.string.msg_error_emptyDefaultDir);
-		b.setCancelable(false);
-		b.setPositiveButton(R.string.activity_settings, new DialogInterface.OnClickListener() {
+		mAlertBuilder.setTitle(R.string.app_name);
+		mAlertBuilder.setIcon(R.drawable.ic_warning);
+		mAlertBuilder.setMessage(R.string.msg_error_emptyDefaultDir);
+		mAlertBuilder.setCancelable(false);
+		mAlertBuilder.setPositiveButton(R.string.activity_settings, new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface d, int i) {
 				startActivity(new Intent(ProjerActivity.this, SettingsActivity.class));
 			}
 		});
-		b.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+		mAlertBuilder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
 			public void onClick(DialogInterface d, int i) {
 				finish();
 			}
 		});
 
-		b.show();
+		mAlertBuilder.show();
 		
 	}
 	

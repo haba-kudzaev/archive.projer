@@ -27,7 +27,7 @@
     </style>
 	
 	<style name="AppTheme.AlertDialog" parent="Theme.AppCompat.Dialog.Alert">
-		<item name="colorAccent">@color/colorAccent</item>
+		<item name="colorAccent">?colorAccent</item>
         <item name="android:background">@drawable/abc_dialog_material_background</item>
     </style>
 
@@ -38,8 +38,8 @@
 	
 	<style name="AppTheme.Intro" parent="AppTheme.NoActionBar">
 		<item name="android:windowBackground">@drawable/layer_background_intro</item>
-		<item name="android:navigationBarColor">@color/colorPrimary</item>
-		<item name="colorPrimaryDark">@color/colorPrimary</item>
+		<item name="android:navigationBarColor">?colorPrimary</item>
+		<item name="colorPrimaryDark">?colorPrimary</item>
     </style>
 
 	<style name="AppTheme.Preferences" parent="AppTheme">
@@ -50,7 +50,7 @@
 
 	<style name="AppTheme.TabLayout" parent="Widget.Design.TabLayout">
 		<item name="tabIndicatorColor">?attr/colorAccent</item>
-		<item name="tabIndicatorHeight">1dp</item>
+		<item name="tabIndicatorHeight">2dp</item>
 		<item name="tabPaddingStart">?android:attr/listPreferredItemPaddingStart</item>
 		<item name="tabPaddingEnd">?android:attr/listPreferredItemPaddingEnd</item>
 		<item name="tabBackground">?attr/selectableItemBackground</item>

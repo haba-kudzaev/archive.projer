@@ -134,7 +134,7 @@ public class SettingsActivity extends PreferenceActivity {
 	}
 	
 	// диалог со списком изменений
-	void appChangelogDialog() {
+	/*void appChangelogDialog() {
 
 		WebView mWebView = new android.webkit.WebView(this);
 		WebSettings mWebSettings = mWebView.getSettings();
@@ -150,6 +150,6 @@ public class SettingsActivity extends PreferenceActivity {
 		mAlertBuilder.setTitle("Changelogs");
 		mAlertBuilder.show();
 
-	}
+	}*/
 	
 }

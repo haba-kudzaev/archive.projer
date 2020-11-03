@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 		
 		mViewPager = findViewById(R.id.ui_view_viewPager);
 		mTabLayout = findViewById(R.id.ui_view_tabLayout);
-
+		
 		setSupportActionBar(mToolbar);
 		setViewPager(mViewPager);
 		

@@ -62,6 +62,9 @@
 		android:defaultValue="com.aide.web"
 		android:dialogTitle="@string/pref_dbg_aideweb_custom_package_name_dlgTitle"/>
 	
+	<o1310.rx1310.app.projer.ui.preference.DescPreference
+		android:summary="@string/pref_dbg_aideweb_custom_package_name_desc"/>
+	
 	<Preference
 		android:icon="@android:color/transparent"
 		android:key="dbg_uninstallAideWeb"

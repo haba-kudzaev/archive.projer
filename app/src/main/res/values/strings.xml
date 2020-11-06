@@ -14,6 +14,8 @@
 	<string name="msg_error_emptyDefaultDir">Не указана папка для проектов! Пожалуйста, перейдите в настройки Projer и введите название каталога для будующих проектов.</string>
 	<string name="msg_done">Готово!</string>
 	
+	<string name="promt">Подсказка</string>
+	
 	<string name="projer_info_currentDir" formatted="false">После нажатия кнопки «Создать» проект будет создан в папке %1$s во внутренней памяти устройства. Сменить папку, в которой будут созданы проекты, можно в настройках Projer.</string>
 	<string name="projer_info_autorunAideStatus" formatted="false">Также учтите, что после создания проекта среда разработки %1$s запущена. Вы также можете изменить это в настройках.</string>
 	<string name="projer_info_autorunAideStatus_will_be">будет</string>

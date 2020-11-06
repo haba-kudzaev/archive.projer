@@ -10,6 +10,10 @@
 		android:defaultValue="AppProjects/Projer"
 		android:dialogTitle="@string/pref_default_dir_dlgTitle"/>
 	
+	<o1310.rx1310.app.projer.ui.preference.DescPreference
+		android:title="@string/promt"
+		android:summary="@string/pref_default_dir_desc"/>
+	
 	<SwitchPreference
 		android:icon="@android:color/transparent"
 		android:key="finishProjerActivityAfterProjectCreation"
@@ -39,7 +43,7 @@
 		
 	<o1310.rx1310.app.projer.ui.preference.CategoryPreference
 		android:title="@string/pref_category_dbg"/>
-
+	
 	<SwitchPreference
 		android:enabled="false"
 		android:icon="@android:color/transparent"
@@ -63,6 +67,7 @@
 		android:dialogTitle="@string/pref_dbg_aideweb_custom_package_name_dlgTitle"/>
 	
 	<o1310.rx1310.app.projer.ui.preference.DescPreference
+		android:title="@string/promt"
 		android:summary="@string/pref_dbg_aideweb_custom_package_name_desc"/>
 	
 	<Preference
@@ -113,5 +118,8 @@
 		android:icon="@android:color/transparent"
 		android:key="appVersion"
 		android:title="@string/pref_about_app_version"/>
+	
+	<o1310.rx1310.app.projer.ui.preference.DescPreference
+		android:key="appDevInfo"/>
 	
 </PreferenceScreen>

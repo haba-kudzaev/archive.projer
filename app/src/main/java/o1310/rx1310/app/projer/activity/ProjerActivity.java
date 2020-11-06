@@ -19,7 +19,6 @@ import android.preference.PreferenceManager;
 
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.support.v7.app.AlertDialog;
 
 import android.text.TextUtils;
 
@@ -29,6 +28,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import android.app.AlertDialog;
 
 import o1310.rx1310.app.projer.R;
 import o1310.rx1310.app.projer.utility.AppUtils;

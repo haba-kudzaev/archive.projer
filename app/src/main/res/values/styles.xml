@@ -28,7 +28,7 @@
 	
 	<style name="AppTheme.AlertDialog" parent="Theme.AppCompat.Dialog.Alert">
 		<item name="colorAccent">?colorAccent</item>
-        <item name="android:background">@drawable/abc_dialog_material_background</item>
+        <!--item name="android:background">@drawable/abc_dialog_material_background</item-->
     </style>
 
 	<style name="AppTheme.NoActionBar" parent="AppTheme">

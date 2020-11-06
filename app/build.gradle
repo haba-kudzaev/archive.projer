@@ -9,7 +9,7 @@ android {
         applicationId "o1310.rx1310.app.projer"
         minSdkVersion 14
         targetSdkVersion 29
-        versionCode 2020
+        versionCode 201106
         versionName "b1"
 		
     }

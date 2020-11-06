@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 
 import android.os.Bundle;
+import android.os.Build;
 
 import android.preference.EditTextPreference;
 import android.preference.Preference;
@@ -24,8 +25,6 @@ import android.widget.ListView;
 
 import o1310.rx1310.app.projer.R;
 import o1310.rx1310.app.projer.utility.AppUtils;
-import android.support.v7.app.AlertDialog;
-import android.os.Build;
 
 public class SettingsActivity extends PreferenceActivity {
 
@@ -59,10 +58,11 @@ public class SettingsActivity extends PreferenceActivity {
 		aideInstalledStatus.setSummary(aideWebInstalledStatus());
 		
 		appVersion = findPreference("appVersion");
+		appVersion.setSelectable(false);
+		appVersion.setEnabled(false);
 		appVersion.setSummary(AppUtils.getAppVersion(this, getPackageName()));
 		
 		appDevInfo = findPreference("appDevInfo");
-		appDevInfo.setTitle("App dev info");
 		appDevInfo.setSummary("Package name: " + getPackageName() + "\nDevice: " + Build.MANUFACTURER + " " + Build.MODEL + " (" + Build.DEVICE + ")\nAndroid version: " + Build.VERSION.RELEASE + " (SDK " + Build.VERSION.SDK + ")\n\n" + Build.FINGERPRINT);
 		
 		installInA2IGA = findPreference("installInA2IGA");

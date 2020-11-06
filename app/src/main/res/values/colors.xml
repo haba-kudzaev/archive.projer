@@ -7,6 +7,6 @@
 	<color name="colorWindow">#FF121212</color>
 	
 	<color name="colorIcon">#FFFFFFFF</color>
-	<color name="colorDescPreferenceBackground">#FF443626</color>
+	<color name="colorPromtPreferenceBackground">#FF443626</color>
 	
 </resources>

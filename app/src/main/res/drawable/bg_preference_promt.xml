@@ -9,7 +9,7 @@
 			android:radius="9.0dip" />
 
 		<solid 
-			android:color="@color/colorDescPreferenceBackground" />
+			android:color="@color/colorPromtPreferenceBackground" />
 
 	</shape>
 

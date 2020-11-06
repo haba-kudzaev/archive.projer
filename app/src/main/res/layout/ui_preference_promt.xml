@@ -6,7 +6,7 @@
 	android:layout_height="wrap_content">
 
 	<LinearLayout
-		android:background="@drawable/bg_preference_desc"
+		android:background="@drawable/bg_preference_promt"
 		android:layout_marginStart="72dp"
 		android:layout_marginEnd="?android:attr/listPreferredItemPaddingEnd"
 		android:orientation="vertical"

@@ -9,7 +9,7 @@
 	<string name="pref_default_dir">Каталог для проектов</string>
 	<string name="pref_default_dir_summary" formatted="false">Папка, в которой будут созданы новые проекты</string>
 	<string name="pref_default_dir_dlgTitle">Имя папки</string>
-	<string name="pref_default_dir_desc">Если в названии папки будет указан знак «/», то будет создана еще одна вложенная папка.\n\nНапр.: «My/Projects» - будет создана папка «Projects» в папке «My»</string>
+	<string name="pref_default_dir_promt">Если в названии папки будет указан знак «/», то будет создана еще одна вложенная папка.\n\nНапр.: «My/Projects» - будет создана папка «Projects» в папке «My».</string>
 	
 	<string name="pref_finish_activity_after_work">Автозакрытие окна</string>
 	<string name="pref_finish_activity_after_work_summary">Закрывать окно «Новый проект» после завершения процесса создания проекта?</string>
@@ -24,7 +24,7 @@
 	<string name="pref_dbg_request_restart">Требуется перезапуск!</string>
 	<string name="pref_dbg_show_test_tabs">Тестовые вкладки</string>
 	<string name="pref_dbg_aideweb_custom_package_name">Имя пакета AIDE Web</string>
-	<string name="pref_dbg_aideweb_custom_package_name_desc">Полезно, если у Вас установлена модификация AIDE Web с измененным именем пакета.</string>
+	<string name="pref_dbg_aideweb_custom_package_name_promt">Полезно, если у Вас установлена модификация AIDE Web с измененным именем пакета.</string>
 	<string name="pref_dbg_aideweb_custom_package_name_dlgTitle">Имя пакета AIDE Web</string>
 	<string name="pref_dbg_uninstall_aideweb">Удалить AIDE Web</string>
 	<string name="pref_dbg_uninstall_projer">Удалить Projer</string>

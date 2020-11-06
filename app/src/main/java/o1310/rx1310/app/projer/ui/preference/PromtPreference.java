@@ -11,12 +11,12 @@ import android.util.AttributeSet;
 
 import o1310.rx1310.app.projer.R;
 
-public class DescPreference extends CategoryPreference {
+public class PromtPreference extends CategoryPreference {
 
-	public DescPreference(Context c, AttributeSet attrs) {
+	public PromtPreference(Context c, AttributeSet attrs) {
 		super(c, attrs);
 		setSelectable(false);
-		setLayoutResource(R.layout.ui_preference_desc);
+		setLayoutResource(R.layout.ui_preference_promt);
 	}
 
 }

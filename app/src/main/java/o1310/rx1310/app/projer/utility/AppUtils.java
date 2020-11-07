@@ -22,7 +22,7 @@ import o1310.rx1310.app.projer.R;
 
 public class AppUtils {
 	
-	// Показ Toast-сообщения
+	// ? Показ Toast-сообщения
 	public static void Toast(Context context, String message, boolean gravityCenter, boolean lengthLong) {
 		
 		int toastDuration;
@@ -43,7 +43,7 @@ public class AppUtils {
 		
 	}
 
-	// Для отправки репортов на почту разработчика
+	// ? Для отправки репортов на почту разработчика
 	public static void sendReport(Context context) {
 
 		String mailSubject = "REPORT: Projer " + getAppVersion(context, getPackageName(context));
@@ -62,7 +62,7 @@ public class AppUtils {
 
 	}
 
-	// Открытие ссылки
+	// ? Открытие ссылки
 	public static void openURL(Context context, String link) {
 
 		Intent i = new Intent(Intent.ACTION_VIEW);
@@ -72,7 +72,7 @@ public class AppUtils {
 
 	}
 	
-	// Проверка установки приложения на устройстве
+	// ? Проверка установки приложения на устройстве
 	public static Boolean checkAppInstall(Context context, String packageName) {
 
 		try {
@@ -88,7 +88,7 @@ public class AppUtils {
 
 	}
 
-	// Получение package name приложения
+	// ? Получение package name приложения
 	public static String getPackageName(Context context) {
 
 		try {
@@ -106,7 +106,7 @@ public class AppUtils {
 
 	}
 	
-	// Получение версии приложения
+	// ? Получение версии приложения
 	public static String getAppVersion(Context context, String packageName) {
 		
 		try {
@@ -126,7 +126,7 @@ public class AppUtils {
 		
 	}
 
-	// Запуск стороннего приложения
+	// ? Запуск стороннего приложения
 	public static void startApp(Context context, String packageName) {
 
 		Intent i = context.getPackageManager().getLaunchIntentForPackage(packageName);
@@ -143,7 +143,7 @@ public class AppUtils {
 
 	}
 
-	// Запроч на удаление приложения
+	// ? Запрос на удаление приложения
 	public static void uninstallApp(Context context, String packageName) {
 
 		Intent i = new Intent(Intent.ACTION_DELETE);

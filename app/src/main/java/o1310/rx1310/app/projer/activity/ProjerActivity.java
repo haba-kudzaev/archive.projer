@@ -71,7 +71,7 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		mFinishProjerActivityAfterProjectCreation = mSharedPreferences.getBoolean("finishProjerActivityAfterProjectCreation", false);
 		
 		mToolbar = findViewById(R.id.ui_view_toolBar);
-		mToolbar.setNavigationIcon(R.drawable.ic_close);
+		//mToolbar.setNavigationIcon(R.drawable.ic_close);
 		
 		// ? Настройка Toolbar
 		setSupportActionBar(mToolbar); 

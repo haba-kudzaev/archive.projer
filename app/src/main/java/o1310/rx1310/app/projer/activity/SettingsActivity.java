@@ -34,7 +34,7 @@ public class SettingsActivity extends PreferenceActivity {
 	EditTextPreference defaultDir;
 	Preference appVersion, appDevInfo, aideInstalledStatus, installInA2IGA;
 
-	String mAideWebPackageName;
+	String mAideWebPackageName, appVersionType;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +43,12 @@ public class SettingsActivity extends PreferenceActivity {
 		addPreferencesFromResource(R.xml.app_settings);
 		
 		mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+		
+		if (AppUtils.getAppVersion(this, getPackageName()).contains("b")) {
+			appVersionType = "beta";
+		} else {
+			appVersionType = "stable";
+		}
 		
 		mAideWebPackageName = mSharedPreferences.getString("dbg_aideCustomPackageName", "com.aide.web");
 		
@@ -58,12 +64,10 @@ public class SettingsActivity extends PreferenceActivity {
 		aideInstalledStatus.setSummary(aideWebInstalledStatus());
 		
 		appVersion = findPreference("appVersion");
-		appVersion.setSelectable(false);
-		appVersion.setEnabled(false);
 		appVersion.setSummary(AppUtils.getAppVersion(this, getPackageName()));
 		
 		appDevInfo = findPreference("appDevInfo");
-		appDevInfo.setSummary("Package name: " + getPackageName() + "\nDevice: " + Build.MANUFACTURER + " " + Build.MODEL + " (" + Build.DEVICE + ")\nAndroid version: " + Build.VERSION.RELEASE + " (SDK " + Build.VERSION.SDK + ")\n\n" + Build.FINGERPRINT);
+		appDevInfo.setSummary("Package name: " + getPackageName() + "\nVersion type: " + appVersionType + "\nDevice: " + Build.MANUFACTURER + " " + Build.MODEL + " (" + Build.DEVICE + ")\nAndroid version: " + Build.VERSION.RELEASE + " (SDK " + Build.VERSION.SDK + ")\n\n" + Build.FINGERPRINT);
 		
 		installInA2IGA = findPreference("installInA2IGA");
 		installInA2IGA.setSummary(a2igaInstalledStatus());
@@ -88,6 +92,10 @@ public class SettingsActivity extends PreferenceActivity {
 				
 			case "appDev":
 				AppUtils.openURL(this, "https://t.me/rx1310_dev");
+				break;
+				
+			case "appVersion":
+				AppUtils.Toast(this, "👨‍💻 with ❤️ by rx1310", true, false);
 				break;
 				
 			case "installInA2IGA":

@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 		dbg_showTestTabs = mSharedPreferences.getBoolean("dbg_showTestTabs", false);
 		
 		mToolbar = findViewById(R.id.ui_view_toolBar);
-		mToolbar.setNavigationIcon(R.drawable.ic_projer);
+		mToolbar.setNavigationIcon(R.drawable.ic_close);
 		
 		mViewPager = findViewById(R.id.ui_view_viewPager);
 		mTabLayout = findViewById(R.id.ui_view_tabLayout);
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
         switch(id) {
 			
 			case android.R.id.home:
-				AppUtils.Toast(this, "👨‍💻 with ❤️ by rx1310", true, false);
+				finish();
 				return true;
 
             case R.id.menu_main_settings :

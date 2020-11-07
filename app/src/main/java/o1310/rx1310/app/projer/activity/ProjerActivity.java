@@ -72,15 +72,8 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		
 		mToolbar = findViewById(R.id.ui_view_toolBar);
 		mToolbar.setNavigationIcon(R.drawable.ic_close);
-		/*mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(ProjerActivity.this, MainActivity.class);
-				startActivity(intent);
-				finish();
-			}
-		});*/
-			
+		
+		// ? Настройка Toolbar
 		setSupportActionBar(mToolbar); 
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -108,13 +101,21 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		mInfoAideAutorun = findViewById(R.id.ui_projer_view_info_autorunAideStatus);
 		mInfoAideAutorun.setText(String.format(getString(R.string.projer_info_autorunAideStatus), autoRunAideStatus()));
 		
-		// Если поле ввода папки для проектов пустое
+		// ? Если поле ввода папки для проектов пустое
 		if (TextUtils.isEmpty(mDefaultDir4Projects)) {
 			emptyDefaultDirMessage();
 			mCreateProject.setEnabled(false);
 			mInputProjectName.setEnabled(false);
 		}
 		
+	}
+	
+	// ! Для кнопки "Close" в Toolbar
+	// ? Закрывает активити
+	@Override
+	public boolean onSupportNavigateUp() {
+		onBackPressed();
+		return true;
 	}
 	
 	public void onClick(View v) {
@@ -161,6 +162,7 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		
 	}
 	
+	// ? Диалог, вызываемый при попытке создать проект в пустом каталоге
 	void emptyDefaultDirMessage() {
 		
 		AlertDialog.Builder mAlertBuilder = new AlertDialog.Builder(ProjerActivity.this);
@@ -184,10 +186,12 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		
 	}
 	
+	// ? Отдельный поток для разархивирования проекта
 	class CreatorTask extends AsyncTask<Void, Void, Void> {
 
 		String projExtractPath() {
 			
+			// ? Если бета-версия сабжа, то проекты будут разархивированы в спец. папку 
 			if (AppUtils.getAppVersion(ProjerActivity.this, getPackageName()).contains("b")) {
 				return "/sdcard/.projer_beta/" + mDefaultDir4Projects + "/" + mInputProjectName.getText().toString();
 			} else {
@@ -208,6 +212,7 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		@Override
 		protected Void doInBackground(Void... params) {
 			
+			// ? Работа библиотеки Unzipper
 			Unzipper.unzipFromAssets(ProjerActivity.this, mProjectAssetFile, projExtractPath());
 			
 			if (mRunAideAfterProjectCreation) {
@@ -228,7 +233,7 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 				finish();
 			} else {
 				
-				// Скрываем иконку
+				// ? Скрываем иконку
 				Handler handler = new Handler(); 
 				handler.postDelayed(new Runnable() {
 					public void run() {

@@ -21,8 +21,9 @@
 	
 	<!-- Отладка -->
 	<string name="pref_dbg_allow_empty_project_name">Проекты без имени</string>
-	<string name="pref_dbg_request_restart">Требуется перезапуск!</string>
+	<string name="pref_dbg_request_restart">Для применения настройки требуется перезапуск приложения!</string>
 	<string name="pref_dbg_show_test_tabs">Тестовые вкладки</string>
+	<string name="pref_dbg_show_test_tabs_summary">Отобразить вкладки, находящиеся в разработке?</string>
 	<string name="pref_dbg_aideweb_custom_package_name">Имя пакета AIDE Web</string>
 	<string name="pref_dbg_aideweb_custom_package_name_promt">Полезно, если у Вас установлена модификация AIDE Web с измененным именем пакета.</string>
 	<string name="pref_dbg_aideweb_custom_package_name_dlgTitle">Имя пакета AIDE Web</string>

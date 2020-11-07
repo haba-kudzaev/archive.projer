@@ -56,8 +56,12 @@
 		android:icon="@android:color/transparent"
 		android:key="dbg_showTestTabs"
 		android:title="@string/pref_dbg_show_test_tabs"
-		android:summary="@string/pref_dbg_request_restart"
+		android:summary="@string/pref_dbg_show_test_tabs_summary"
 		android:defaultValue="false"/>
+	
+	<o1310.rx1310.app.projer.ui.preference.PromtPreference
+		android:title="@string/promt"
+		android:summary="@string/pref_dbg_request_restart"/>
 	
 	<EditTextPreference
 		android:icon="@android:color/transparent"

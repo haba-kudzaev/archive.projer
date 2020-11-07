@@ -26,16 +26,20 @@ public class IntroActivity extends AppCompatActivity {
 				@Override
 				public void run() {
 
+					// ? Запуск MainActivity
 					Intent i = new Intent(IntroActivity.this, MainActivity.class);
 					IntroActivity.this.startActivity(i);
-					// после того как загрузились в MainActivity нужно
-					// убить IntroActivity, иначе при нажатии на кнопку Back
-					// юзер снова попадет на сплеш.
+					
+					// ? "Убийство" сплеша (иначе при нажатии пользователем
+					// кнопки "Back" будет открыт снова сплеш.
 					IntroActivity.this.finish();
+					
+					// ? Отображение анимации при переходе к MainActivity
 					overridePendingTransition(R.anim.abc_fade_in, R.anim.abc_fade_out);
+					
 				}
 
-			}, 1000);
+			}, 1000); // ? 1000 = 1s (задержка перехода)
 
 	}
 

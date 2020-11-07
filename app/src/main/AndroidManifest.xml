@@ -55,9 +55,9 @@
 			android:label="@string/activity_projer"
 			android:windowSoftInputMode="adjustResize">
 			
-			<meta-data
+			<!--meta-data
 				android:name="android.support.PARENT_ACTIVITY"
-				android:value="o1310.rx1310.app.projer.activity.MainActivity"/>
+				android:value="o1310.rx1310.app.projer.activity.MainActivity"/-->
 			
 		</activity>
 		

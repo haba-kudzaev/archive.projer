@@ -95,10 +95,19 @@
 		android:key="installInA2IGA"
 		android:title="@string/pref_more_a2iga"/>
 	
+	<o1310.rx1310.app.projer.ui.preference.PromtPreference
+		android:title="@string/promt"
+		android:summary="@string/pref_more_a2iga_promt"/>
+	
 	<!-- About -->
 	<o1310.rx1310.app.projer.ui.preference.CategoryPreference
 		android:title="@string/pref_category_about"/>
 	
+	<Preference
+		android:icon="@android:color/transparent"
+		android:key="appVersion"
+		android:title="@string/pref_about_app_version"/>
+
 	<Preference
 		android:icon="@android:color/transparent"
 		android:key="appDev"
@@ -117,11 +126,6 @@
 		android:key="appFAQ"
 		android:title="@string/pref_about_app_faq"
 		android:summary="@string/pref_about_app_faq_summary"/>
-	
-	<Preference
-		android:icon="@android:color/transparent"
-		android:key="appVersion"
-		android:title="@string/pref_about_app_version"/>
 	
 	<o1310.rx1310.app.projer.ui.preference.PromtPreference
 		android:key="appDevInfo"

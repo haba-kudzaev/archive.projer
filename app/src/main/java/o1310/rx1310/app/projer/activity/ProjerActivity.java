@@ -192,7 +192,7 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		String projExtractPath() {
 			
 			// ? Если бета-версия сабжа, то проекты будут разархивированы в спец. папку 
-			if (AppUtils.getAppVersion(ProjerActivity.this, getPackageName()).contains("b")) {
+			if (AppUtils.getAppVersion(ProjerActivity.this, getPackageName(), false).contains("b")) {
 				return "/sdcard/.projer_beta/" + mDefaultDir4Projects + "/" + mInputProjectName.getText().toString();
 			} else {
 				return "/sdcard/" + mDefaultDir4Projects + "/" + mInputProjectName.getText().toString();

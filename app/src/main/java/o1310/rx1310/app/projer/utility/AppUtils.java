@@ -46,7 +46,7 @@ public class AppUtils {
 	// ? Для отправки репортов на почту разработчика
 	public static void sendReport(Context context) {
 
-		String mailSubject = "REPORT: Projer " + getAppVersion(context, getPackageName(context));
+		String mailSubject = "REPORT: Projer " + getAppVersion(context, getPackageName(context), false);
 		
 		Intent i = new Intent(Intent.ACTION_SEND);
 		i.setType("message/rfc822");
@@ -107,7 +107,7 @@ public class AppUtils {
 	}
 	
 	// ? Получение версии приложения
-	public static String getAppVersion(Context context, String packageName) {
+	public static String getAppVersion(Context context, String packageName, boolean versionCodeAside) {
 		
 		try {
 
@@ -117,8 +117,12 @@ public class AppUtils {
 			String vn = pi.versionName;
 			int vc = pi.versionCode;
 			
-			return vn + "." + vc;
-
+			if (versionCodeAside) {
+				return vn + " (" + vc + ")";
+			} else {
+				return vn + "." + vc;
+			}
+			
 		} catch (Exception exc) {
 			exc.printStackTrace();
 			return "e: getAppVersion()";

@@ -44,7 +44,7 @@ public class SettingsActivity extends PreferenceActivity {
 		
 		mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 		
-		if (AppUtils.getAppVersion(this, getPackageName()).contains("b")) {
+		if (AppUtils.getAppVersion(this, getPackageName(), false).contains("b")) {
 			appVersionType = "beta";
 		} else {
 			appVersionType = "stable";
@@ -64,7 +64,7 @@ public class SettingsActivity extends PreferenceActivity {
 		aideInstalledStatus.setSummary(aideWebInstalledStatus());
 		
 		appVersion = findPreference("appVersion");
-		appVersion.setSummary(AppUtils.getAppVersion(this, getPackageName()));
+		appVersion.setSummary(AppUtils.getAppVersion(this, getPackageName(), false));
 		
 		appDevInfo = findPreference("appDevInfo");
 		appDevInfo.setSummary("Package name: " + getPackageName() + "\nVersion type: " + appVersionType + "\nDevice: " + Build.MANUFACTURER + " " + Build.MODEL + " (" + Build.DEVICE + ")\nAndroid version: " + Build.VERSION.RELEASE + " (SDK " + Build.VERSION.SDK + ")\n\n" + Build.FINGERPRINT);
@@ -112,7 +112,7 @@ public class SettingsActivity extends PreferenceActivity {
 	String aideWebInstalledStatus() {
 		
 		if (AppUtils.checkAppInstall(this, mAideWebPackageName)) {
-			return "true | version: " + AppUtils.getAppVersion(this, mAideWebPackageName);
+			return "true | version: " + AppUtils.getAppVersion(this, mAideWebPackageName, true);
 		} else {
 			return "false";
 		}

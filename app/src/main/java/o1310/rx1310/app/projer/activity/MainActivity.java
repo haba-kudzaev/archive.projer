@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
 		setContentView(R.layout.activity_main);
 		
-		if (AppUtils.getAppVersion(this, getPackageName()).contains("b")) {
+		if (AppUtils.getAppVersion(this, getPackageName(), false).contains("b")) {
 			setTitle(getString(R.string.activity_main) + " (beta)");
 		}
 		

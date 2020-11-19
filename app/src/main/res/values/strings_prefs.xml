@@ -29,6 +29,8 @@
 	<string name="pref_dbg_aideweb_custom_package_name_dlgTitle">Имя пакета AIDE Web</string>
 	<string name="pref_dbg_uninstall_aideweb">Удалить AIDE Web</string>
 	<string name="pref_dbg_uninstall_projer">Удалить Projer</string>
+	<string name="pref_dbg_allow_slash_project_name">Слеш в имени проекта</string>
+	<string name="pref_dbg_allow_slash_project_name_summary">Разрешить использовать символ «/» в названии проекта?</string>
 	
 	<!-- Дополнительно -->
 	<string name="pref_more_a2iga">Интеграция с A2IGA</string>

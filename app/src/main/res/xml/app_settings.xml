@@ -84,6 +84,13 @@
 		android:key="dbg_uninstallProjer"
 		android:title="@string/pref_dbg_uninstall_projer"/>
 	
+	<SwitchPreference
+		android:icon="@android:color/transparent"
+		android:key="dbg_allowSlashProjectName"
+		android:title="@string/pref_dbg_allow_slash_project_name"
+		android:summary="@string/pref_dbg_allow_slash_project_name_summary"
+		android:defaultValue="false"/>
+	
 	<o1310.rx1310.app.projer.ui.preference.BorderPreference />
 		
 	<!-- More -->

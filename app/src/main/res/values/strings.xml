@@ -12,6 +12,7 @@
 	
 	<string name="msg_error_emptyProjectName">Введите имя проекта!</string>
 	<string name="msg_error_emptyDefaultDir">Не указана папка для проектов! Пожалуйста, перейдите в настройки Projer и введите название каталога для будующих проектов.</string>
+	<string name="msg_error_invalidProjectName">Недопустимое имя проекта!</string>
 	<string name="msg_done">Готово!</string>
 	
 	<string name="promt">Подсказка</string>

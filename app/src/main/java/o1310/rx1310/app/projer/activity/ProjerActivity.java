@@ -46,6 +46,7 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 	
 	String mProjectAssetFile, mProjectDesc, mDefaultDir4Projects, mAideWebPackageName;
 	boolean mRunAideAfterProjectCreation, mFinishProjerActivityAfterProjectCreation;
+	boolean dbg_allowSlashProjectName;
 	
 	SharedPreferences mSharedPreferences;
 	Intent mIntent;
@@ -69,6 +70,7 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 		
 		mRunAideAfterProjectCreation = mSharedPreferences.getBoolean("runAideAfterProjectCreation", false);
 		mFinishProjerActivityAfterProjectCreation = mSharedPreferences.getBoolean("finishProjerActivityAfterProjectCreation", false);
+		dbg_allowSlashProjectName = mSharedPreferences.getBoolean("dbg_allowSlashProjectName", false);
 		
 		mToolbar = findViewById(R.id.ui_view_toolBar);
 		//mToolbar.setNavigationIcon(R.drawable.ic_close);
@@ -127,6 +129,10 @@ public class ProjerActivity extends AppCompatActivity implements View.OnClickLis
 				if (TextUtils.isEmpty(mInputProjectName.getText().toString())) {
 					
 					mInputProjectName.setError(getString(R.string.msg_error_emptyProjectName));
+					
+				} else if (mInputProjectName.getText().toString().contains("/") && !dbg_allowSlashProjectName) {
+					
+					mInputProjectName.setError(getString(R.string.msg_error_invalidProjectName));
 					
 				} else {
 					

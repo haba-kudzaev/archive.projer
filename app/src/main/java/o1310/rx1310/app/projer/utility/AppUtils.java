@@ -46,7 +46,7 @@ public class AppUtils {
 	// ? Для отправки репортов на почту разработчика
 	public static void sendReport(Context context) {
 
-		String mailSubject = "REPORT: Projer " + getAppVersion(context, getPackageName(context), false);
+		String mailSubject = "REPORT: Projer " + getAppVersion(context, getPackageName(context), true);
 		
 		Intent i = new Intent(Intent.ACTION_SEND);
 		i.setType("message/rfc822");

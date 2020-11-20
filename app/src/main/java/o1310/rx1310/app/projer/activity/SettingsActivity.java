@@ -64,7 +64,7 @@ public class SettingsActivity extends PreferenceActivity {
 		aideInstalledStatus.setSummary(aideWebInstalledStatus());
 		
 		appVersion = findPreference("appVersion");
-		appVersion.setSummary(AppUtils.getAppVersion(this, getPackageName(), false));
+		appVersion.setSummary(AppUtils.getAppVersion(this, getPackageName(), true));
 		
 		appDevInfo = findPreference("appDevInfo");
 		appDevInfo.setSummary("Package name: " + getPackageName() + "\nVersion type: " + appVersionType + "\nDevice: " + Build.MANUFACTURER + " " + Build.MODEL + " (" + Build.DEVICE + ")\nAndroid version: " + Build.VERSION.RELEASE + " (SDK " + Build.VERSION.SDK + ")\n\n" + Build.FINGERPRINT);

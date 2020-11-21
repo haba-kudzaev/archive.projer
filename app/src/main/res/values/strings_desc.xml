@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	
-	<string name="desc_project_sample_htmlCss">Будет создан базовый проект с чистыми HTML и CSS (без библиотек и фреймворков).</string>
-	<string name="desc_project_sample_htmlCssJs">Будет создан базовый проект AIDE Web с чистыми HTML, CSS и JavaScript (без библиотек и фреймворков).</string>
-	<string name="desc_project_sample_htmlJs">Будет создан базовый проект с HTML и JavaScript (без стилей, библиотек и фреймворков).</string>
-	<string name="desc_project_sample_js">Будет создан проект консольного JavaScript-приложения.</string>
+	<string name="desc_project_htmlCss">Будет создан базовый проект с чистыми HTML и CSS (без библиотек и фреймворков).</string>
+	<string name="desc_project_htmlCssJs">Будет создан базовый проект AIDE Web с чистыми HTML, CSS и JavaScript (без библиотек и фреймворков).</string>
+	<string name="desc_project_js">Будет создан проект консольного JavaScript-приложения.</string>
 		
 </resources>

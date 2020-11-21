@@ -1,8 +1,8 @@
 /*
- * @author      rx1310 <rx1310@inbox.ru>
- * @copyright   Copyright (c) o1310, 2020
- * @license     MIT License
- */
+* @author      rx1310 <rx1310@inbox.ru>
+* @copyright   Copyright (c) o1310, 2020
+* @license     MIT License
+*/
 
 package o1310.rx1310.app.projer.fragment;
 
@@ -21,13 +21,13 @@ import android.content.Intent;
 import o1310.rx1310.app.projer.R;
 import o1310.rx1310.app.projer.activity.ProjerActivity;
 
-public class SimpleProjectsFragment extends ListFragment {
+public class BootstrapProjectsFragment extends ListFragment {
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 
-		ArrayAdapter<CharSequence> a = ArrayAdapter.createFromResource(getActivity(), R.array.projects_sample, R.layout.ui_listview_item);
+		ArrayAdapter<CharSequence> a = ArrayAdapter.createFromResource(getActivity(), R.array.projects_bootstrap, R.layout.ui_listview_item);
 		setListAdapter(a);
 
 	}
@@ -37,18 +37,7 @@ public class SimpleProjectsFragment extends ListFragment {
 
 		switch (p) {
 
-			// htmlCss
 			case 0:
-				ProjerActivity.startWizard(getActivity(), "proj_htmlCss.zip", getString(R.string.desc_project_htmlCss));
-				break;
-				
-			// htmlCssJs
-			case 1:
-				ProjerActivity.startWizard(getActivity(), "proj_htmlCssJs.zip", getString(R.string.desc_project_htmlCssJs));
-				break;
-				
-			// js
-			case 2:
 				ProjerActivity.startWizard(getActivity(), "proj_js.zip", getString(R.string.desc_project_js));
 				break;
 				

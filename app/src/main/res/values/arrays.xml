@@ -5,8 +5,27 @@
 	<string-array name="projects_sample">
 		<item>HTML &amp; CSS</item>
 		<item>HTML &amp; CSS, JavaScript</item>
-		<item>HTML &amp; JavaScript</item>
 		<item>JavaScript Console App</item>
+	</string-array>
+	
+	<!-- Bootstrap projects -->
+	<string-array name="projects_bootstrap">
+		<item>Bootstrap 4.5.3</item>
+		<item>Bootstrap 4.4.1</item>
+		<item>Bootstrap 4.3.1</item>
+		<item>Bootstrap 4.2.1</item>
+		<item>Bootstrap 4.1.3</item>
+		<item>Bootstrap 4.0.0</item>
+		<item>Bootstrap 3.4.1</item>
+		<item>Bootstrap 3.3.7</item>
+		<item>Bootstrap 2.3.2</item>
+		<item>Bootstrap 2.3.1</item>
+		<item>Bootstrap 2.3.0</item>
+		<item>Bootstrap 2.2.2</item>
+		<item>Bootstrap 2.2.1</item>
+		<item>Bootstrap 2.1.1</item>
+		<item>Bootstrap 2.0.4</item>
+		<item>Bootstrap 1.4.0</item>
 	</string-array>
 	
 </resources>

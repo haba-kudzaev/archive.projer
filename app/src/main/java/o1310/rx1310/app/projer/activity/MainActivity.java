@@ -33,6 +33,7 @@ import o1310.rx1310.app.projer.activity.MainActivity;
 import o1310.rx1310.app.projer.adapter.TheFragmentPagerAdapter;
 import o1310.rx1310.app.projer.fragment.SimpleProjectsFragment;
 import o1310.rx1310.app.projer.utility.AppUtils;
+import o1310.rx1310.app.projer.fragment.BootstrapProjectsFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -86,9 +87,7 @@ public class MainActivity extends AppCompatActivity {
 		a.addFragment(new SimpleProjectsFragment(), getString(R.string.tab_projects_simple));
 		
 		if (dbg_showTestTabs) {
-			a.addFragment(new SimpleProjectsFragment(), getString(R.string.tab_projects_bootstrap));
-			a.addFragment(new SimpleProjectsFragment(), getString(R.string.tab_projects_jquery));
-			a.addFragment(new SimpleProjectsFragment(), getString(R.string.tab_projects_vuejs));
+			a.addFragment(new BootstrapProjectsFragment(), getString(R.string.tab_projects_bootstrap));
 		}
 		
 		vp.setAdapter(a);

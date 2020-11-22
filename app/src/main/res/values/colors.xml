@@ -8,5 +8,6 @@
 	
 	<color name="colorIcon">#FFFFFFFF</color>
 	<color name="colorPromtPreferenceBackground">#FF443626</color>
+	<color name="colorEdiTextBackground">#FF050505</color>
 	
 </resources>

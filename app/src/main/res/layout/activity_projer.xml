@@ -49,11 +49,14 @@
 		android:layout_marginBottom="14dp">
 
 		<EditText
+			android:background="@drawable/bg_editext"
 			android:layout_width="match_parent"
 			android:ems="10"
 			android:layout_height="wrap_content"
 			android:inputType="text|textAutoComplete|textAutoCorrect"
-			android:id="@+id/ui_projer_view_inputProjectName"/>
+			android:id="@+id/ui_projer_view_inputProjectName"
+			android:padding="14dp"
+			android:layout_marginBottom="12dp"/>
 
 		<FrameLayout
 			android:layout_width="match_parent"
@@ -72,7 +75,8 @@
 				android:layout_height="24dp"
 				android:layout_gravity="left|center"
 				android:id="@+id/ui_projer_view_creatorStatus"
-				android:visibility="gone"/>
+				android:visibility="gone"
+				android:layout_marginLeft="10dp"/>
 
 		</FrameLayout>
 
@@ -84,93 +88,100 @@
 		android:layout_height="1dp"/>
 
 	<LinearLayout
-		android:layout_marginTop="14dp"
-		android:layout_marginEnd="?android:attr/listPreferredItemPaddingEnd"
-		android:layout_marginStart="?android:attr/listPreferredItemPaddingStart"
 		android:orientation="vertical"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginBottom="14dp">
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
 
 		<LinearLayout
-			android:orientation="horizontal"
+			android:layout_marginTop="14dp"
+			android:layout_marginEnd="?android:attr/listPreferredItemPaddingEnd"
+			android:layout_marginStart="?android:attr/listPreferredItemPaddingStart"
+			android:orientation="vertical"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:gravity="top|left">
+			android:layout_marginBottom="14dp">
 
-			<ImageView
-				android:src="@drawable/ic_folder"
-				android:layout_width="24dp"
-				android:layout_height="24dp"/>
-
-			<TextView
-				android:layout_width="wrap_content"
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
-				android:layout_marginLeft="16dp"
-				android:id="@+id/ui_projer_view_info_currentDir"/>
+				android:gravity="top|left">
+
+				<ImageView
+					android:src="@drawable/ic_folder"
+					android:layout_width="24dp"
+					android:layout_height="24dp"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="16dp"
+					android:id="@+id/ui_projer_view_info_currentDir"/>
+
+			</LinearLayout>
+
+			<View
+				android:background="?android:attr/dividerVertical"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:layout_marginBottom="10dp"
+				android:layout_marginLeft="40dp"
+				android:layout_marginTop="10dp"/>
+
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="top|left">
+
+				<ImageView
+					android:src="@drawable/ic_open_in_app"
+					android:layout_width="24dp"
+					android:layout_height="24dp"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="16dp"
+					android:id="@+id/ui_projer_view_info_autorunAideStatus"/>
+
+			</LinearLayout>
+
+			<View
+				android:background="?android:attr/dividerVertical"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:layout_marginBottom="10dp"
+				android:layout_marginLeft="40dp"
+				android:layout_marginTop="10dp"/>
+
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="top|left">
+
+				<ImageView
+					android:src="@drawable/ic_warning"
+					android:layout_width="24dp"
+					android:layout_height="24dp"/>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/projer_info_inputTip"
+					android:layout_marginLeft="16dp"/>
+
+			</LinearLayout>
 
 		</LinearLayout>
 
 		<View
 			android:background="?android:attr/dividerVertical"
 			android:layout_width="match_parent"
-			android:layout_height="1dp"
-			android:layout_marginBottom="10dp"
-			android:layout_marginLeft="40dp"
-			android:layout_marginTop="10dp"/>
-
-		<LinearLayout
-			android:orientation="horizontal"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:gravity="top|left">
-
-			<ImageView
-				android:src="@drawable/ic_open_in_app"
-				android:layout_width="24dp"
-				android:layout_height="24dp"/>
-
-			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginLeft="16dp"
-				android:id="@+id/ui_projer_view_info_autorunAideStatus"/>
-
-		</LinearLayout>
-
-		<View
-			android:background="?android:attr/dividerVertical"
-			android:layout_width="match_parent"
-			android:layout_height="1dp"
-			android:layout_marginBottom="10dp"
-			android:layout_marginLeft="40dp"
-			android:layout_marginTop="10dp"/>
-
-		<LinearLayout
-			android:orientation="horizontal"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:gravity="top|left">
-
-			<ImageView
-				android:src="@drawable/ic_warning"
-				android:layout_width="24dp"
-				android:layout_height="24dp"/>
-
-			<TextView
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="@string/projer_info_inputTip"
-				android:layout_marginLeft="16dp"/>
-
-		</LinearLayout>
+			android:layout_height="1dp"/>
 
 	</LinearLayout>
-
-	<View
-		android:background="?android:attr/dividerVertical"
-		android:layout_width="match_parent"
-		android:layout_height="1dp"/>
 
 </LinearLayout>
 

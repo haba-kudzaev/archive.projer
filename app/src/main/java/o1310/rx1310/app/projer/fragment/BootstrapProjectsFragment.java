@@ -37,9 +37,9 @@ public class BootstrapProjectsFragment extends ListFragment {
 
 		switch (p) {
 
-			case 0:
+			/*case 0:
 				ProjerActivity.startWizard(getActivity(), "proj_js.zip", getString(R.string.desc_project_js));
-				break;
+				break;*/
 				
 			default: break;
 

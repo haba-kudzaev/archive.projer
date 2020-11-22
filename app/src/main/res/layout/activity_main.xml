@@ -36,13 +36,44 @@
 			android:text="@string/activity_main_desc"
 			android:paddingBottom="6dp"/>
 
+		<LinearLayout
+			android:background="@drawable/bg_preference_promt"
+			android:layout_marginEnd="?android:attr/listPreferredItemPaddingEnd"
+			android:layout_marginStart="?android:attr/listPreferredItemPaddingStart"
+			android:orientation="vertical"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginBottom="6dp"
+			android:layout_marginTop="6dp">
+
+			<TextView
+				android:paddingStart="14dp"
+				android:paddingEnd="14dp"
+				android:paddingTop="10dp"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:textStyle="bold"
+				android:textColor="?colorAccent"
+				android:text="Обратите внимание!"/>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingStart="14dp"
+				android:paddingEnd="14dp"
+				android:paddingTop="4dp"
+				android:paddingBottom="10dp"
+				android:text="Вы используете бета-версию приложения. В случае обнаружения критических проблем сообщите разработчику о них."/>
+
+		</LinearLayout>
+		
 		<android.support.design.widget.TabLayout
 			android:id="@+id/ui_view_tabLayout"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:overScrollMode="never"
 			app:tabGravity="fill"
-            app:tabMode="scrollable"
+			app:tabMode="scrollable"
 			style="@style/AppTheme.TabLayout"/>
 
 	</android.support.design.widget.AppBarLayout>

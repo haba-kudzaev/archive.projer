@@ -42,7 +42,7 @@
 	<!-- О программе -->
 	<string name="pref_about_app_version">Версия приложения</string>
 	<string name="pref_about_app_dev">Разработчик</string>
-	<string name="pref_about_app_dev_summary">rx1310 (from «o1310»)</string>
+	<string name="pref_about_app_dev_summary">rx1310</string>
 	<string name="pref_about_app_source_code">Исходный код</string>
 	<string name="pref_about_app_source_code_summary">Projer является проектом с открытым исходным кодом и бесплатно распространяется по лицензии MIT</string>
 	<string name="pref_about_app_faq">FAQ</string>

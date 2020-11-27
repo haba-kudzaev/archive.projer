@@ -1,10 +1,10 @@
 /*
 * @author      rx1310 <rx1310@inbox.ru>
-* @copyright   Copyright (c) o1310, 2020
+* @copyright   Copyright (c) rx1310, 2020
 * @license     MIT License
 */
 
-package o1310.rx1310.app.projer.fragment;
+package ru.rx1310.app.projer.fragment;
 
 import android.os.Bundle;
 
@@ -18,8 +18,8 @@ import android.widget.Toast;
 
 import android.content.Intent;
 
-import o1310.rx1310.app.projer.R;
-import o1310.rx1310.app.projer.activity.ProjerActivity;
+import ru.rx1310.app.projer.R;
+import ru.rx1310.app.projer.activity.ProjerActivity;
 
 public class BootstrapProjectsFragment extends ListFragment {
 

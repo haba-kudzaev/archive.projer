@@ -1,10 +1,10 @@
 /*
  * @author      rx1310 <rx1310@inbox.ru>
- * @copyright   Copyright (c) o1310, 2020
+ * @copyright   Copyright (c) rx1310, 2020
  * @license     MIT License
  */
  
-package o1310.rx1310.app.projer.activity;
+package ru.rx1310.app.projer.activity;
 
 import android.content.Intent;
 
@@ -13,7 +13,7 @@ import android.os.Handler;
 
 import android.support.v7.app.AppCompatActivity;
 
-import o1310.rx1310.app.projer.R;
+import ru.rx1310.app.projer.R;
 
 public class IntroActivity extends AppCompatActivity {
 

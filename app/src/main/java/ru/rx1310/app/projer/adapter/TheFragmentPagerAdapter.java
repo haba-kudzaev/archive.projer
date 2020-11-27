@@ -1,10 +1,10 @@
 /*
  * @author      rx1310 <rx1310@inbox.ru>
- * @copyright   Copyright (c) o1310, 2020
+ * @copyright   Copyright (c) rx1310, 2020
  * @license     MIT License
  */
 
-package o1310.rx1310.app.projer.adapter;
+package ru.rx1310.app.projer.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

@@ -6,7 +6,7 @@ android {
     
     defaultConfig {
 		
-        applicationId "o1310.rx1310.app.projer"
+        applicationId "ru.rx1310.app.projer"
         minSdkVersion 14
         targetSdkVersion 29
         versionCode 3

@@ -1,14 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
 <manifest
 	xmlns:android="http://schemas.android.com/apk/res/android"
-	package="o1310.rx1310.app.projer">
+	package="ru.rx1310.app.projer">
 	
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 	<uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES"/>
 	<uses-permission android:name="android.permission.INTERNET"/>
 		
-	<original-package android:name="o1310.rx1310.app.projer"/>
+	<original-package android:name="ru.rx1310.app.projer"/>
 		
 	<supports-screens
 		android:anyDensity="true"
@@ -57,7 +57,7 @@
 			
 			<!--meta-data
 				android:name="android.support.PARENT_ACTIVITY"
-				android:value="o1310.rx1310.app.projer.activity.MainActivity"/-->
+				android:value="ru.rx1310.app.projer.activity.MainActivity"/-->
 			
 		</activity>
 		
@@ -83,7 +83,7 @@
 			
 			<meta-data
 				android:name="android.support.PARENT_ACTIVITY"
-				android:value="o1310.rx1310.app.projer.activity.MainActivity"/>
+				android:value="ru.rx1310.app.projer.activity.MainActivity"/>
 			
 		</activity>
 		

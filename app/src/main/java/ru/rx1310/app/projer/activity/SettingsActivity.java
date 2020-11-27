@@ -1,10 +1,10 @@
 /*
  * @author      rx1310 <rx1310@inbox.ru>
- * @copyright   Copyright (c) o1310, 2020
+ * @copyright   Copyright (c) rx1310, 2020
  * @license     MIT License
  */
 
-package o1310.rx1310.app.projer.activity;
+package ru.rx1310.app.projer.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -23,8 +23,8 @@ import android.webkit.WebView;
 
 import android.widget.ListView;
 
-import o1310.rx1310.app.projer.R;
-import o1310.rx1310.app.projer.utility.AppUtils;
+import ru.rx1310.app.projer.R;
+import ru.rx1310.app.projer.utility.AppUtils;
 
 public class SettingsActivity extends PreferenceActivity {
 
@@ -122,7 +122,7 @@ public class SettingsActivity extends PreferenceActivity {
 	// Статус установки A2IGA
 	String a2igaInstalledStatus() {
 		
-		if (AppUtils.checkAppInstall(this, "o1310.rx1310.app.a2iga")) {
+		if (AppUtils.checkAppInstall(this, "ru.rx1310.app.a2iga")) {
 			return getString(R.string.pref_more_a2iga_summary);
 		} else {
 			return getString(R.string.pref_more_a2iga_summary) + "\n\n" + getString(R.string.pref_more_a2iga_not_found_summary);
@@ -132,7 +132,7 @@ public class SettingsActivity extends PreferenceActivity {
 	
 	void installInA2IGA() {
 		
-		if (AppUtils.checkAppInstall(this, "o1310.rx1310.app.a2iga")) {
+		if (AppUtils.checkAppInstall(this, "ru.rx1310.app.a2iga")) {
 			
 			Intent sendPackageName = new Intent();
 			sendPackageName.setAction(Intent.ACTION_SEND);
@@ -141,7 +141,7 @@ public class SettingsActivity extends PreferenceActivity {
 			startActivity(Intent.createChooser(sendPackageName, getString(R.string.pref_more_a2iga_chooser_title)));
 			
 		} else {
-			AppUtils.openURL(this, "https://github.com/o1310/a2iga/releases");
+			AppUtils.openURL(this, "https://github.com/rx1310/a2iga/releases");
 		}
 		
 	}

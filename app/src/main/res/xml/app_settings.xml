@@ -10,7 +10,7 @@
 		android:defaultValue="AppProjects/Projer"
 		android:dialogTitle="@string/pref_default_dir_dlgTitle"/>
 	
-	<o1310.rx1310.app.projer.ui.preference.PromtPreference
+	<ru.rx1310.app.projer.ui.preference.PromtPreference
 		android:title="@string/promt"
 		android:summary="@string/pref_default_dir_promt"/>
 	
@@ -22,7 +22,7 @@
 		android:defaultValue="false"/>
 	
 	<!-- AIDE Web -->
-	<o1310.rx1310.app.projer.ui.preference.CategoryPreference
+	<ru.rx1310.app.projer.ui.preference.CategoryPreference
 		android:title="@string/pref_category_aideweb"/>
 	
 	<Preference
@@ -39,9 +39,9 @@
 		android:defaultValue="false"/>
 		
 	<!-- Debug -->
-	<o1310.rx1310.app.projer.ui.preference.BorderPreference />
+	<ru.rx1310.app.projer.ui.preference.BorderPreference />
 		
-	<o1310.rx1310.app.projer.ui.preference.CategoryPreference
+	<ru.rx1310.app.projer.ui.preference.CategoryPreference
 		android:title="@string/pref_category_dbg"/>
 	
 	<SwitchPreference
@@ -59,7 +59,7 @@
 		android:summary="@string/pref_dbg_show_test_tabs_summary"
 		android:defaultValue="false"/>
 	
-	<o1310.rx1310.app.projer.ui.preference.PromtPreference
+	<ru.rx1310.app.projer.ui.preference.PromtPreference
 		android:title="@string/promt"
 		android:summary="@string/pref_dbg_request_restart"/>
 	
@@ -70,7 +70,7 @@
 		android:defaultValue="com.aide.web"
 		android:dialogTitle="@string/pref_dbg_aideweb_custom_package_name_dlgTitle"/>
 	
-	<o1310.rx1310.app.projer.ui.preference.PromtPreference
+	<ru.rx1310.app.projer.ui.preference.PromtPreference
 		android:title="@string/promt"
 		android:summary="@string/pref_dbg_aideweb_custom_package_name_promt"/>
 	
@@ -91,10 +91,10 @@
 		android:summary="@string/pref_dbg_allow_slash_project_name_summary"
 		android:defaultValue="false"/>
 	
-	<o1310.rx1310.app.projer.ui.preference.BorderPreference />
+	<ru.rx1310.app.projer.ui.preference.BorderPreference />
 		
 	<!-- More -->
-	<o1310.rx1310.app.projer.ui.preference.CategoryPreference
+	<ru.rx1310.app.projer.ui.preference.CategoryPreference
 		android:title="@string/pref_category_more"/>
 	
 	<Preference
@@ -102,12 +102,12 @@
 		android:key="installInA2IGA"
 		android:title="@string/pref_more_a2iga"/>
 	
-	<o1310.rx1310.app.projer.ui.preference.PromtPreference
+	<ru.rx1310.app.projer.ui.preference.PromtPreference
 		android:title="@string/promt"
 		android:summary="@string/pref_more_a2iga_promt"/>
 	
 	<!-- About -->
-	<o1310.rx1310.app.projer.ui.preference.CategoryPreference
+	<ru.rx1310.app.projer.ui.preference.CategoryPreference
 		android:title="@string/pref_category_about"/>
 	
 	<Preference
@@ -134,7 +134,7 @@
 		android:title="@string/pref_about_app_faq"
 		android:summary="@string/pref_about_app_faq_summary"/>
 	
-	<o1310.rx1310.app.projer.ui.preference.PromtPreference
+	<ru.rx1310.app.projer.ui.preference.PromtPreference
 		android:key="appDevInfo"
 		android:title="Dev info"/>
 	

@@ -1,10 +1,10 @@
 /*
  * @author      rx1310 <rx1310@inbox.ru>
- * @copyright   Copyright (c) o1310, 2020
+ * @copyright   Copyright (c) rx1310, 2020
  * @license     MIT License
  */
 
-package o1310.rx1310.app.projer.activity;
+package ru.rx1310.app.projer.activity;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -31,8 +31,8 @@ import android.widget.TextView;
 
 import android.app.AlertDialog;
 
-import o1310.rx1310.app.projer.R;
-import o1310.rx1310.app.projer.utility.AppUtils;
+import ru.rx1310.app.projer.R;
+import ru.rx1310.app.projer.utility.AppUtils;
 
 import rx1310.lib.unzipper.Unzipper;
 

@@ -1,10 +1,10 @@
 /*
  * @author      rx1310 <rx1310@inbox.ru>
- * @copyright   Copyright (c) o1310, 2020
+ * @copyright   Copyright (c) rx1310, 2020
  * @license     MIT License
  */
 
-package o1310.rx1310.app.projer.activity;
+package ru.rx1310.app.projer.activity;
 
 import android.Manifest;
 
@@ -28,12 +28,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import o1310.rx1310.app.projer.R;
-import o1310.rx1310.app.projer.activity.MainActivity;
-import o1310.rx1310.app.projer.adapter.TheFragmentPagerAdapter;
-import o1310.rx1310.app.projer.fragment.SimpleProjectsFragment;
-import o1310.rx1310.app.projer.utility.AppUtils;
-import o1310.rx1310.app.projer.fragment.BootstrapProjectsFragment;
+import ru.rx1310.app.projer.R;
+import ru.rx1310.app.projer.activity.MainActivity;
+import ru.rx1310.app.projer.adapter.TheFragmentPagerAdapter;
+import ru.rx1310.app.projer.fragment.SimpleProjectsFragment;
+import ru.rx1310.app.projer.utility.AppUtils;
+import ru.rx1310.app.projer.fragment.BootstrapProjectsFragment;
 
 public class MainActivity extends AppCompatActivity {
 

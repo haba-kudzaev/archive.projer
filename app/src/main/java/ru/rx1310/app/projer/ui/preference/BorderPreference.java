@@ -1,15 +1,15 @@
 /*
  * @author      rx1310 <rx1310@inbox.ru>
- * @copyright   Copyright (c) o1310, 2020
+ * @copyright   Copyright (c) rx1310, 2020
  * @license     MIT License
  */
 
-package o1310.rx1310.app.projer.ui.preference;
+package ru.rx1310.app.projer.ui.preference;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
-import o1310.rx1310.app.projer.R;
+import ru.rx1310.app.projer.R;
 
 public class BorderPreference extends CategoryPreference {
 

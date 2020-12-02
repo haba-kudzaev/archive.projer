@@ -10,7 +10,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 29
         versionCode 3
-        versionName "1.03-b"
+        versionName "20.0-b"
 		
 		/* -b — Beta
 		 * -rc — Release candidate
@@ -36,9 +36,9 @@ dependencies {
 	implementation 'android.arch.core:common:+'
 	implementation 'android.arch.core:runtime:+'
 	
-	implementation 'com.android.support:support-v4:27.+'
-	implementation 'com.android.support:design:27.+'
-	implementation 'com.android.support:appcompat-v7:27.+'
+	implementation 'com.android.support:support-v4:28.+'
+	implementation 'com.android.support:design:28.+'
+	implementation 'com.android.support:appcompat-v7:28.+'
 	
 	implementation fileTree(dir: 'libs', include: ['*.jar'])
 	
